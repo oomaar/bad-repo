@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Fly Insights</title>
+</head>
+
+<body>
+	
+<div class="wrapper">
+	<nav id="sidebar">
+	<span class="top-triangle"></span>
+		<div id="dismiss">
+			<i class="icon-right-small"></i>
+		</div>
+		<div class="sidebar-header">
+			<span class="top-triangle"></span>
+			<div class="logo"><span>Fly</span> Insights</div>
+		</div>
+        <div class="menu-title">Main Menu</div>
+		<ul id="main-menu">
+		    <li class="active"><a href="#submenu-1" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-gauge-1"></i> Dashboard</a>
+				<ul class="collapse submenu-collapse" id="submenu-1" data-bs-parent="#main-menu">
+					<li class="active"><a href="#">Application Compliance</a></li>
+					<li><a href="#">CPU Performance</a></li>
+					<li><a href="#">Memory Performance</a></li>
+					<li><a href="#">Resource Manager</a></li>
+					<li><a href="#">IT Manager</a></li>
+					<li><a href="#">Assets Manager</a></li>
+					<li><a href="#">Time Utilization</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-2" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-params"></i> App Configuration</a>
+				<ul class="collapse submenu-collapse" id="submenu-2" data-bs-parent="#main-menu">
+					<li><a href="#">Application License</a></li>
+					<li><a href="#">Allowed Applications</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-3" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-users-outline"></i> Users</a>
+				<ul class="collapse submenu-collapse" id="submenu-3" data-bs-parent="#main-menu">
+					<li><a href="#">Users Profile</a></li>
+					<li><a href="#">Users Edit</a></li>
+					<li><a href="#">Users Cards</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-4" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-calendar-8"></i> Calender</a>
+				<ul class="collapse submenu-collapse" id="submenu-4" data-bs-parent="#main-menu">
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">Draggable Calender</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="icon-clipboard-2"></i> Tasks</a></li>
+			<li><a href="#"><i class="icon-question-circle-o"></i> FAQ</a></li>
+			<li><a href="#"><i class="icon-wrench-3"></i> Maintenance</a></li>
+			
+
+		</ul>
+	</nav>
+
+	<!-- Page Content  -->
+	<div id="content">
+	    <div class="top-nav">
+			<button type="button" id="sidebarCollapse" class="btn"><i class="icon-menu-1"></i></button>
+
+		  <form class="topbar-search me-auto d-none d-md-flex">
+		  <input type="text" class="form-control" placeholder="Search projects…">
+		  <button type="button" class="btn"><i class="icon-search"></i></button>
+		  </form>
+
+
+		  <ul class="navbar navbar-expand topbar-menu">
+			  <li class="nav-item dropdown d-block d-md-none">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-search-7"></i></a>
+
+			  <div class="dropdown-menu slideIn" aria-labelledby="navbarDropdown">
+				<form class="topbar-search d-flex">
+				  <input type="text" class="form-control" placeholder="Search…">
+				  <button type="button" class="btn"><i class="icon-search"></i></button>
+				</form>
+			  </div>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="badge badge-notification rounded-pill bg-primary">4</span><i class="icon-bell"></i></a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown3" id="notification">
+				  <li class="dropdown-menu-header">4 new notifications</li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-primary icon-info-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-warning icon-warning"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-danger icon-cancel-circle"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-success icon-ok-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				  <li class="dropdown-menu-footer"><a href="#" class="text-muted">Show all notifications</a>
+				</li>
+
+			  </ul>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown user-control">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="user-pic">
+					  <img src="img/user-pic.jpg" alt=""/>
+					  <span class="user-status"></span>
+				  </i>
+				  <span class="d-none d-md-inline">
+					  <span class="userName-text">Ahmed Ramzy Adel</span>
+					  <small>General manager</small>
+				  </span>
+			  </a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown4">
+				<li><a class="dropdown-item" href="#"><i class="icon-user-2"></i> My profile</a></li>
+				<li><a class="dropdown-item" href="#"><i class="icon-logout-2"></i> Log out</a></li>
+			  </ul>
+			  </li><!--dropdown-->
+		  </ul>  
+		  </div><!--top-nav-->
+		
+		<div class="page-container">
+			<div class="page-title d-xl-flex">
+				<h1 class="me-auto">Time Utilization</h1>
+
+				<div class="topFilter row g-2">
+					<div class="col-auto">
+						<div class="selectpicker-iconUsers w-auto">
+						<select class="selectpicker" data-live-search="true">
+						  <option>Select User</option>
+						  <option>DESKTOP-CPRTJ1T</option>
+						  <option>DESKTOP-438QRB6</option>
+						  <option>DESKTOP-DN48MAS</option>
+						</select>
+						</div><!--selectpicker-icon-->
+					</div><!--col-auto-->
+					<div class="col-auto">
+						<div id="reportrange2" class="btn btn-light">
+							<i class="icon-calendar-inv"></i>&nbsp;
+							<span></span>
+							<i class="icon-down-open-mini"></i>
+						</div><!--reportrange-->
+					</div><!--col-auto-->
+				</div><!--topFilter-->
+			</div><!--page-title-->
+			
+			<div class="white-box">
+				<div class="chart_TimeUtilization">
+					<h3>Applications Usage Duration</h3>
+					<span class="vAxis">Duration (minutes)</span>
+					<div id="chart_TimeUtilization"></div>
+				</div>
+			</div><!--white-box-->
+			<div class="white-box">
+			    <div class="accordion" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+						<i class="icon-stopwatch-1 me-2"></i> 8:00 AM <small class="ms-2">(28.00 Minutes)</small>
+					  </button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						  <div class="timeUtilization-info">
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Google Chrome</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">12.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card-->
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Slack</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">2.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Microsoft Outlook</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">14.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+						  </div><!--timeUtilization-info-->
+					  </div><!--accordion-body-->
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+						<i class="icon-stopwatch-1 me-2"></i> 9:00 AM <small class="ms-2">(28.00 Minutes)</small>
+					  </button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Google Chrome</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">12.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card-->
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Slack</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">2.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Microsoft Outlook</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">14.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+						<i class="icon-stopwatch-1 me-2"></i> 10:00 AM <small class="ms-2">(28.00 Minutes)</small>
+					  </button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Google Chrome</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">12.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card-->
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Slack</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">2.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+							<div class="card">
+							  <div class="card-body">
+								  <div class="row">
+									  <div class="col-xl-4 col-lg-5 col-md-6">Microsoft Outlook</div><!--col-->
+									  <div class="col-xl-8 col-lg-7 col-md-6">14.00 <span>Minutes</span></div><!--col-->
+								  </div><!--row-->
+							  </div><!--card-body-->
+							</div><!--card--> 
+					  </div>
+					</div>
+				  </div>
+                </div><!--accordion-->
+			</div><!--white-box-->
+			
+		</div><!--page-container-->
+		<p class="copyright2">Copyright © 2022 Fly Insights.</p>
+	</div><!--content-->
+</div>
+	
+<div class="overlay"></div>
+	
+<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+<!--Scrollbar-sidebarCollapse--->
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#sidebar").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+	$("#notification").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+
+	$('#dismiss, .overlay').on('click', function () {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar, #content').toggleClass('active');
+		$('.overlay').addClass('active');
+		$('.collapse.in').toggleClass('in');
+		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	});
+});
+</script>
+
+<!--selectpicker-->
+<script src="js/bootstrap-select.min.js"></script>
+<script>
+$('.selectpicker').selectpicker();
+</script>
+	
+<!--daterangepicker-->
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+	
+<script type="text/javascript">
+$(function() {
+
+    var start = moment();
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange2 span').html(start.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange2').daterangepicker({
+        startDate: start,
+        endDate: end,
+		singleDatePicker: true,
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
+
+<!--googleCharts-->	
+<script src="./charts/loader.js"></script>
+<!--ColumnCharts-->	
+<script type="text/javascript">
+google.charts.load("current", {packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+	
+function drawChart() {
+  var data = new google.visualization.DataTable();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Adobe Acrobat DC');
+      data.addColumn('number', 'Google Chrome');
+	  data.addColumn('number', 'Slack');
+	  data.addColumn('number', 'Microsoft OneNote');
+	  data.addColumn('number', 'Microsoft Outlook');
+	  data.addColumn('number', 'TeamViewer');
+	  data.addColumn('number', 'Application Frame Host');
+	
+
+      data.addRows([
+        [{v: [8, 0, 0], f: '8 am'}, 6, 3, , , 0, 10, ,],
+        [{v: [9, 0, 0], f: '9 am'}, , 20, , , , , 10,],
+        [{v: [10, 0, 0], f:'10 am'}, 8, 17, 0, , 20, , ,],
+        [{v: [11, 0, 0], f: '11 am'}, 10, , , , 20, , ,],
+        [{v: [12, 0, 0], f: '12 pm'}, , 20, , , 6, , ,],
+        [{v: [13, 0, 0], f: '1 pm'}, , , , , , 10, ,],
+        [{v: [14, 0, 0], f: '2 pm'}, 8, 3, , , , , ,],
+        [{v: [15, 0, 0], f: '3 pm'}, 8, 3, , , , 18, ,],
+        [{v: [16, 0, 0], f: '4 pm'}, , 20, , , 6, , ,],
+        [{v: [17, 0, 0], f: '5 pm'}, 20, 3, , , , 40, ,],
+        [{v: [18, 0, 0], f: '6 pm'}, , , , 30, , 10, ,],
+        [{v: [19, 0, 0], f: '7 pm'}, , , , , , , ,],
+        [{v: [20, 0, 0], f: '8 pm'}, , , , , , , ,],
+        [{v: [21, 0, 0], f: '9 pm'}, , , , , , , ,],
+        [{v: [22, 0, 0], f: '10 pm'}, , , , , , , ,],
+        [{v: [23, 0, 0], f: '11 pm'}, , , , , , , ,],
+        [{v: [24, 0, 0], f: '12 am'}, , , , , , , ,],
+        [{v: [25, 0, 0], f: '1 am'}, , , , , , , ,],
+        [{v: [26, 0, 0], f: '2 am'}, , , , , , , ,],
+        [{v: [27, 0, 0], f: '3 am'}, , , , , , , ,],
+        [{v: [28, 0, 0], f: '4 am'}, , , , , , , ,],
+        [{v: [29, 0, 0], f: '5 am'}, , , , , , , ,],
+        [{v: [30, 0, 0], f: '6 am'}, , , , , , , ,],
+        [{v: [31, 0, 0], f: '7 am'}, , , , , , , ,],
+      ]);
+
+  var options = {
+        //title: 'Motivation and Energy Level Throughout the Day',
+        isStacked: true,
+	    height: 320,
+	    legend: { position: 'top'/*, maxLines: 3*/},
+        hAxis: {
+          title: 'Time of Day',
+			titleTextStyle: {
+			color: '#313a46',
+			fontSize: 12,
+			italic: false,
+			},
+			textStyle: {
+            fontSize: 13,
+            color: '#313a46',
+          },
+          format: 'h:mm a',
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [31, 30, 0]
+          }
+        },
+        vAxis: {
+            /*title: 'Duration (minutes)',
+			titleTextStyle: {
+			color: '#313a46',
+			fontSize: 12,
+			italic: false,
+			},*/
+			textStyle: {
+            fontSize: 13,
+            color: '#6c757d',
+          }
+        }
+  };
+	
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_TimeUtilization'));
+      chart.draw(data, options);
+	  
+    }
+	
+</script>
+	
+<!--datatables--->	
+<script src="js/datatables.min.js"></script>
+<script>
+	$(document).ready(function () {
+	$('#dtBasicExample,#dtBasicExample2,#dtBasicExample3').DataTable();
+	$('.dataTables_length').addClass('bs-select');
+	});
+</script>
+</body>
+</html>

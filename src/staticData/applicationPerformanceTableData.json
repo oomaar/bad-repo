@@ -1,0 +1,196 @@
+{
+  "tableHeadings": [
+    {
+      "id": 1,
+      "title": "Application name",
+      "style": false
+    },
+    {
+      "id": 2,
+      "title": "Duration (Minutes)",
+      "style": false
+    },
+    {
+      "id": 3,
+      "title": "Failure percentage",
+      "style": false
+    },
+    {
+      "id": 4,
+      "title": "Failure instances",
+      "style": false
+    },
+    {
+      "id": 5,
+      "title": "Number of devices",
+      "style": false
+    },
+    {
+      "id": 6,
+      "title": "Details",
+      "style": true
+    }
+  ],
+  "tableRows": [
+    {
+      "id": 1.1,
+      "appName": "Zoom",
+      "usage": "521",
+      "percentage": "10%",
+      "instances": "21",
+      "devices": "232"
+    },
+    {
+      "id": 1.2,
+      "appName": "Zendesk",
+      "usage": "632",
+      "percentage": "22%",
+      "instances": "31",
+      "devices": "264"
+    },
+    {
+      "id": 1.3,
+      "appName": "Windows PowerShell",
+      "usage": "325",
+      "percentage": "22%",
+      "instances": "51",
+      "devices": "326"
+    },
+    {
+      "id": 1.4,
+      "appName": "VMware Workstation",
+      "usage": "652",
+      "percentage": "24%",
+      "instances": "26",
+      "devices": "360"
+    },
+    {
+      "id": 1.5,
+      "appName": "Teams Microsoft",
+      "usage": "261",
+      "percentage": "16%",
+      "instances": "36",
+      "devices": "326"
+    },
+    {
+      "id": 1.6,
+      "appName": "TeamViewer",
+      "usage": "635",
+      "percentage": "62%",
+      "instances": "96",
+      "devices": "367"
+    },
+    {
+      "id": 1.7,
+      "appName": "Salesforce",
+      "usage": "698",
+      "percentage": "65%",
+      "instances": "63",
+      "devices": "124"
+    },
+    {
+      "id": 1.8,
+      "appName": "Microsoft Visual Studio",
+      "usage": "635",
+      "percentage": "63%",
+      "instances": "400",
+      "devices": "320"
+    },
+    {
+      "id": 1.9,
+      "appName": "Microsoft Outlook",
+      "usage": "364",
+      "percentage": "50%",
+      "instances": "150",
+      "devices": "123"
+    },
+    {
+      "id": 1.1,
+      "appName": "Microsoft Edge",
+      "usage": "765",
+      "percentage": "36%",
+      "instances": "63",
+      "devices": "720"
+    },
+    {
+      "id": 1.11,
+      "appName": "Zoom 2",
+      "usage": "521",
+      "percentage": "10%",
+      "instances": "21",
+      "devices": "232"
+    },
+    {
+      "id": 1.12,
+      "appName": "Zendesk 2",
+      "usage": "632",
+      "percentage": "22%",
+      "instances": "31",
+      "devices": "264"
+    },
+    {
+      "id": 1.13,
+      "appName": "Windows PowerShell 2",
+      "usage": "325",
+      "percentage": "22%",
+      "instances": "51",
+      "devices": "326"
+    },
+    {
+      "id": 1.14,
+      "appName": "VMware Workstation 2",
+      "usage": "652",
+      "percentage": "24%",
+      "instances": "26",
+      "devices": "360"
+    },
+    {
+      "id": 1.15,
+      "appName": "Teams Microsoft 2",
+      "usage": "261",
+      "percentage": "16%",
+      "instances": "36",
+      "devices": "326"
+    },
+    {
+      "id": 1.16,
+      "appName": "TeamViewer 2",
+      "usage": "635",
+      "percentage": "62%",
+      "instances": "96",
+      "devices": "367"
+    },
+    {
+      "id": 1.17,
+      "appName": "Salesforce 2",
+      "usage": "698",
+      "percentage": "65%",
+      "instances": "63",
+      "devices": "124"
+    },
+    {
+      "id": 1.18,
+      "appName": "Microsoft Visual Studio 2",
+      "usage": "635",
+      "percentage": "63%",
+      "instances": "400",
+      "devices": "320"
+    },
+    {
+      "id": 1.19,
+      "appName": "Microsoft Outlook 2",
+      "usage": "364",
+      "percentage": "50%",
+      "instances": "150",
+      "devices": "123"
+    },
+    {
+      "id": 1.2,
+      "appName": "Microsoft Edge 2",
+      "usage": "765",
+      "percentage": "36%",
+      "instances": "63",
+      "devices": "720"
+    }
+  ]
+}

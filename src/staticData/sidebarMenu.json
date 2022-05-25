@@ -1,0 +1,150 @@
+[
+  {
+    "title": "Dashboard",
+    "iconClassName": "icon-gauge-1",
+    "groupIndex": 0,
+    "singleLink": false,
+    "links": [
+      {
+        "id": 0,
+        "groupIndex": 0,
+        "RouteName": "Application Performance",
+        "route": "/landing"
+      },
+      {
+        "id": 1,
+        "groupIndex": 0,
+        "RouteName": "Web Availability",
+        "route": "/Web-Availability"
+      },
+      {
+        "id": 2,
+        "groupIndex": 0,
+        "RouteName": "Application Compliance",
+        "route": "/app-compliance"
+      },
+      {
+        "id": 3,
+        "groupIndex": 0,
+        "RouteName": "IT Performance",
+        "route": "/it-performance"
+      },
+      {
+        "id": 4,
+        "groupIndex": 0,
+        "RouteName": "Visited Sites",
+        "route": "/Visited-Sites"
+      },
+      {
+        "id": 5,
+        "groupIndex": 0,
+        "RouteName": "License Monitoring",
+        "route": "/License-Monitoring"
+      },
+      {
+        "id": 6,
+        "groupIndex": 0,
+        "RouteName": "Time Utilization",
+        "route": "/time-util"
+      }
+    ]
+  },
+  {
+    "title": "Configuration",
+    "iconClassName": "icon-params",
+    "groupIndex": 1,
+    "singleLink": false,
+    "links": [
+      {
+        "id": 7,
+        "groupIndex": 1,
+        "RouteName": "Application License",
+        "route": "/Application-License"
+      },
+      {
+        "id": 8,
+        "groupIndex": 1,
+        "RouteName": "Allowed Applications",
+        "route": "/Allowed-Applications"
+      },
+      {
+        "id": 9,
+        "groupIndex": 1,
+        "RouteName": "Web Applications",
+        "route": "/Web-Applications"
+      }
+    ]
+  },
+  {
+    "title": "Users",
+    "iconClassName": "icon-users-outline",
+    "groupIndex": 2,
+    "singleLink": false,
+    "links": [
+      {
+        "id": 10,
+        "groupIndex": 2,
+        "RouteName": "Admin Management",
+        "route": "/admin-management"
+      },
+      {
+        "id": 11,
+        "groupIndex": 2,
+        "RouteName": "Users Edit",
+        "route": ""
+      },
+      {
+        "id": 12,
+        "groupIndex": 2,
+        "RouteName": "Users Cards",
+        "route": ""
+      }
+    ]
+  },
+  {
+    "title": "Calender",
+    "iconClassName": "icon-calendar-8",
+    "groupIndex": 3,
+    "links": [
+      {
+        "id": 10,
+        "groupIndex": 3,
+        "RouteName": "Users Profile",
+        "route": ""
+      },
+      {
+        "id": 13,
+        "groupIndex": 3,
+        "RouteName": "Calender",
+        "route": ""
+      },
+      {
+        "id": 14,
+        "groupIndex": 3,
+        "RouteName": "Draggable Calender",
+        "route": ""
+      }
+    ]
+  },
+  {
+    "title": "Tasks",
+    "iconClassName": "icon-clipboard-2",
+    "groupIndex": 4,
+    "singleLink": true,
+    "links": []
+  },
+  {
+    "title": "FAQ",
+    "iconClassName": "icon-question-circle-o",
+    "groupIndex": 5,
+    "singleLink": true,
+    "links": []
+  },
+  {
+    "title": "Maintenance",
+    "iconClassName": "icon-wrench-3",
+    "groupIndex": 6,
+    "singleLink": true,
+    "links": []
+  }
+]

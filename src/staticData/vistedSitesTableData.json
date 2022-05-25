@@ -1,0 +1,19 @@
+{
+  "tableHeadings": [
+    {
+      "id": 1,
+      "title": "Website",
+      "style": true
+    },
+    {
+      "id": 2,
+      "title": "Total Visits",
+      "style": false
+    },
+    {
+      "id": 3,
+      "title": "Details",
+      "style": false
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "tableHeadings": [
+    {
+      "id": 1,
+      "title": "Application Name"
+    },
+    {
+      "id": 2,
+      "title": "Average Usage"
+    },
+    {
+      "id": 3,
+      "title": "Min Usage"
+    },
+    {
+      "id": 4,
+      "title": "Max Usage"
+    }
+  ],
+  "tabNames": [
+    {
+      "id": 1,
+      "title": "CPU Performance",
+      "tabName": "CPU"
+    },
+    {
+      "id": 2,
+      "title": "Memory Performance",
+      "tabName": "Memory"
+    },
+    {
+      "id": 3,
+      "title": "Disk Performance",
+      "tabName": "Disk"
+    }
+  ]
+}

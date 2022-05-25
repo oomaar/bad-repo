@@ -1,0 +1,696 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Fly Insights</title>
+</head>
+
+<body>
+	
+<div class="wrapper">
+	<nav id="sidebar">
+	<span class="top-triangle"></span>
+		<div id="dismiss">
+			<i class="icon-right-small"></i>
+		</div>
+		<div class="sidebar-header">
+			<span class="top-triangle"></span>
+			<div class="logo"><span>Fly</span> Insights</div>
+		</div>
+        <div class="menu-title">Main Menu</div>
+		<ul id="main-menu">
+		    <li class="active"><a href="#submenu-1" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-gauge-1"></i> Dashboard</a>
+				<ul class="collapse submenu-collapse" id="submenu-1" data-bs-parent="#main-menu">
+					<li class="active"><a href="#">Application Compliance</a></li>
+					<li><a href="#">CPU Performance</a></li>
+					<li><a href="#">Memory Performance</a></li>
+					<li><a href="#">Resource Manager</a></li>
+					<li><a href="#">IT Manager</a></li>
+					<li><a href="#">Assets Manager</a></li>
+					<li><a href="#">Time Utilization</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-2" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-params"></i> App Configuration</a>
+				<ul class="collapse submenu-collapse" id="submenu-2" data-bs-parent="#main-menu">
+					<li><a href="#">Application License</a></li>
+					<li><a href="#">Allowed Applications</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-3" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-users-outline"></i> Users</a>
+				<ul class="collapse submenu-collapse" id="submenu-3" data-bs-parent="#main-menu">
+					<li><a href="#">Users Profile</a></li>
+					<li><a href="#">Users Edit</a></li>
+					<li><a href="#">Users Cards</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-4" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-calendar-8"></i> Calender</a>
+				<ul class="collapse submenu-collapse" id="submenu-4" data-bs-parent="#main-menu">
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">Draggable Calender</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="icon-clipboard-2"></i> Tasks</a></li>
+			<li><a href="#"><i class="icon-question-circle-o"></i> FAQ</a></li>
+			<li><a href="#"><i class="icon-wrench-3"></i> Maintenance</a></li>
+			
+
+		</ul>
+	</nav>
+
+	<!-- Page Content  -->
+	<div id="content">
+	    <div class="top-nav">
+			<button type="button" id="sidebarCollapse" class="btn"><i class="icon-menu-1"></i></button>
+
+		  <form class="topbar-search me-auto d-none d-md-flex">
+		  <input type="text" class="form-control" placeholder="Search projects…">
+		  <button type="button" class="btn"><i class="icon-search"></i></button>
+		  </form>
+
+
+		  <ul class="navbar navbar-expand topbar-menu">
+			  <li class="nav-item dropdown d-block d-md-none">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-search-7"></i></a>
+
+			  <div class="dropdown-menu slideIn" aria-labelledby="navbarDropdown">
+				<form class="topbar-search d-flex">
+				  <input type="text" class="form-control" placeholder="Search…">
+				  <button type="button" class="btn"><i class="icon-search"></i></button>
+				</form>
+			  </div>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="badge badge-notification rounded-pill bg-primary">4</span><i class="icon-bell"></i></a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown3" id="notification">
+				  <li class="dropdown-menu-header">4 new notifications</li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-primary icon-info-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-warning icon-warning"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-danger icon-cancel-circle"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-success icon-ok-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				  <li class="dropdown-menu-footer"><a href="#" class="text-muted">Show all notifications</a>
+				</li>
+
+			  </ul>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown user-control">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="user-pic">
+					  <img src="img/user-pic.jpg" alt=""/>
+					  <span class="user-status"></span>
+				  </i>
+				  <span class="d-none d-md-inline">
+					  <span class="userName-text">Ahmed Ramzy Adel</span>
+					  <small>General manager</small>
+				  </span>
+			  </a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown4">
+				<li><a class="dropdown-item" href="#"><i class="icon-user-2"></i> My profile</a></li>
+				<li><a class="dropdown-item" href="#"><i class="icon-logout-2"></i> Log out</a></li>
+			  </ul>
+			  </li><!--dropdown-->
+		  </ul>  
+		  </div><!--top-nav-->
+		
+		<div class="page-container">
+			<div class="page-title d-xl-flex">
+				<h1 class="me-auto">Applications Performance</h1>
+
+				<div class="topFilter row g-2">
+					<div class="col-auto">
+						<div class="selectpicker-iconUsers">
+						<select class="selectpicker" data-live-search="true">
+						  <option>All Users</option>
+						  <option>Ahmed Ramzy</option>
+						  <option>Mahmoud Hadad</option>
+						  <option>Ayman Eid</option>
+						</select>
+						</div><!--selectpicker-icon-->
+					</div><!--col-auto-->
+					<div class="col-auto">
+						<div class="selectpicker-iconGroup">
+						<select class="selectpicker" data-live-search="true">
+						  <option>All Groups</option>
+						  <option>Group 1</option>
+						  <option>Group 2</option>
+						  <option>Group 3</option>
+						  <option>Group 4</option>
+						</select>
+						</div><!--selectpicker-icon-->
+					</div><!--col-auto-->
+					<div class="col-auto">
+						<div id="reportrange" class="btn btn-light">
+							<i class="icon-calendar-inv"></i>&nbsp;
+							<span></span>
+							<i class="icon-down-open-mini"></i>
+						</div><!--reportrange-->
+					</div><!--col-auto-->
+				</div><!--topFilter-->
+			</div><!--page-title-->
+			
+			<div class="row widgets g-4">
+					<div class="col-xl-4 col-lg-6">
+						<a href="#" class="widget-box" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+							<div class="widget-info">
+							 <h2>Microsoft Dynamics</h2>
+								<div class="row g-2">
+									<div class="col-6">
+									  <h1>560</h1>
+										<p>Total Usage</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>48</h1>
+										<p>Failures Count</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>10</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>06</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--widget-info-->
+							<div class="widget-chart">
+								 <div id="gaugeChart1"></div>
+							</div><!--widget-chart-->
+						</a><!--widget-box-->
+					</div><!--col-->
+					<div class="col-xl-4 col-lg-6">
+						<a href="#" class="widget-box" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+							<div class="widget-info">
+							 <h2>Zendesk</h2>
+								<div class="row g-2">
+									<div class="col-6">
+									  <h1>620</h1>
+										<p>Total Usage</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>52</h1>
+										<p>Failures Count</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>12</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>09</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--widget-info-->
+							<div class="widget-chart">
+								 <div id="gaugeChart2"></div>
+							</div><!--widget-chart-->
+						</a><!--widget-box-->
+					</div><!--col-->
+					<div class="col-xl-4">
+						<a href="#" class="widget-box" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+							<div class="widget-info">
+							 <h2>Salesforce</h2>
+								<div class="row g-2">
+									<div class="col-6">
+									  <h1>720</h1>
+										<p>Total Usage</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>62</h1>
+										<p>Failures Count</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>14</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+									<div class="col-6">
+									  <h1>08</h1>
+										<p>Failure Devices</p>
+									</div><!--col-->
+								</div><!--row-->
+							</div><!--widget-info-->
+							<div class="widget-chart">
+								 <div id="gaugeChart3"></div>
+							</div><!--widget-chart-->
+						</a><!--widget-box-->
+					</div><!--col-->
+			</div><!--row-->
+			
+			<div class="white-box m-0">
+			<div class="table-responsive-lg">
+			<table id="dtBasicExample" class="table table-striped">
+			  <thead>
+				<tr>
+				  <th class="th-sm">Application name
+				  </th>
+				  <th class="th-sm">Usage number
+				  </th>
+				  <th class="th-sm">Failure percentage
+				  </th>
+				  <th class="th-sm">Failure instances
+				  </th>
+				  <th class="th-sm">Number of devices
+				  </th>
+				  <th class="th-sm" width="80">Details
+				  </th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>Zoom</td>
+				  <td>521</td>
+				  <td>10%</td>
+				  <td>21</td>
+				  <td>232</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Zendesk</td>
+				  <td>632</td>
+				  <td>22%</td>
+				  <td>31</td>
+				  <td>264</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Windows PowerShell</td>
+				  <td>325</td>
+				  <td>22%</td>
+				  <td>51</td>
+				  <td>326</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>VMware Workstation</td>
+				  <td>652</td>
+				  <td>24%</td>
+				  <td>26</td>
+				  <td>360</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Teams Microsoft</td>
+				  <td>261</td>
+				  <td>16%</td>
+				  <td>36</td>
+				  <td>326</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>TeamViewer</td>
+				  <td>635</td>
+				  <td>62%</td>
+				  <td>96</td>
+				  <td>367</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Salesforce</td>
+				  <td>698</td>
+				  <td>65%</td>
+				  <td>63</td>
+				  <td>124</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Visual Studio</td>
+				  <td>635</td>
+				  <td>63%</td>
+				  <td>400</td>
+				  <td>320</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Outlook</td>
+				  <td>364</td>
+				  <td>50%</td>
+				  <td>150</td>
+				  <td>123</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Edge</td>
+				  <td>765</td>
+				  <td>36%</td>
+				  <td>63</td>
+				  <td>720</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Zoom 2</td>
+				  <td>521</td>
+				  <td>10%</td>
+				  <td>21</td>
+				  <td>232</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Zendesk 2</td>
+				  <td>632</td>
+				  <td>22%</td>
+				  <td>31</td>
+				  <td>264</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Windows PowerShell 2</td>
+				  <td>325</td>
+				  <td>22%</td>
+				  <td>51</td>
+				  <td>326</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>VMware Workstation 2</td>
+				  <td>652</td>
+				  <td>24%</td>
+				  <td>26</td>
+				  <td>360</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Teams Microsoft 2</td>
+				  <td>261</td>
+				  <td>16%</td>
+				  <td>36</td>
+				  <td>326</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>TeamViewer 2</td>
+				  <td>635</td>
+				  <td>62%</td>
+				  <td>96</td>
+				  <td>367</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Salesforce 2</td>
+				  <td>698</td>
+				  <td>65%</td>
+				  <td>63</td>
+				  <td>124</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Visual Studio 2</td>
+				  <td>635</td>
+				  <td>63%</td>
+				  <td>400</td>
+				  <td>320</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Outlook 2</td>
+				  <td>364</td>
+				  <td>50%</td>
+				  <td>150</td>
+				  <td>123</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Microsoft Edge 2</td>
+				  <td>765</td>
+				  <td>36%</td>
+				  <td>63</td>
+				  <td>720</td>
+				  <td><a href="#" class="view-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-doc-text"></i></a></td>
+				</tr>
+			  </tbody>
+			</table>
+			</div><!--table-responsive-->
+			</div><!--white-box-->	
+		</div><!--page-container-->
+		<p class="copyright2">Copyright © 2022 Fly Insights.</p>
+	</div><!--content-->
+</div>
+	
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Teams Microsoft</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		  <div class="pdf-btn btn-group">
+			  <a href="#" class="btn btn-primary btn-sm"><i class="icon-file-excel"></i> EXCEL</a>
+			  <a href="#" class="btn btn-red btn-sm"><i class="icon-file-pdf"></i> PDF</a>
+		  </div>
+			<div class="table-responsive-lg">
+			<table id="dtBasicExample2" class="table table-striped">
+			  <thead>
+				<tr>
+				  <th class="th-sm">Username
+				  </th>
+				  <th class="th-sm">Failure instances
+				  </th>
+				  <th class="th-sm">Timestamp
+				  </th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>Ahmed Ramzy</td>
+				  <td>06</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Mahmoud Hadad</td>
+				  <td>07</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Talaat Mohseen</td>
+				  <td>09</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Mostafa Mohamed</td>
+				  <td>05</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Khaled Ahmed</td>
+				  <td>12</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Mohmed Kamel</td>
+				  <td>01</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+				<tr>
+				  <td>Ahmed Sarhan</td>
+				  <td>02</td>
+				  <td>Sep 2, 2020, 3:12:00 PM</td>
+				</tr>
+			  </tbody>
+			</table>
+			</div><!--table-responsive-->
+      </div><!--modal-body-->
+    </div>
+  </div>
+</div>
+	
+<div class="overlay"></div>
+	
+<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+<!--Scrollbar-sidebarCollapse--->
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#sidebar").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+	$("#notification").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+
+	$('#dismiss, .overlay').on('click', function () {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar, #content').toggleClass('active');
+		$('.overlay').addClass('active');
+		$('.collapse.in').toggleClass('in');
+		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	});
+});
+</script>
+
+<!--selectpicker-->
+<script src="js/bootstrap-select.min.js"></script>
+<script>
+$('.selectpicker').selectpicker();
+</script>
+	
+<!--daterangepicker-->
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+	
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
+	
+<!--gauge-charts-->
+<script src="js/gauge-chart.js"></script>
+<script>
+// Element inside which you want to see the chart.
+
+let element1 = document.querySelector('#gaugeChart1')
+let element2 = document.querySelector('#gaugeChart2')
+let element3 = document.querySelector('#gaugeChart3')
+
+
+let options1 = {
+  hasNeedle: true,
+  needleColor: '#212529',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  //arcPadding: 1,
+  //arcPaddingColor: 'white',
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabel: ['0%', '100%'],
+  centralLabel: '90%',
+  rangeLabelFontSize: 12,
+}
+
+let options2 = {
+  hasNeedle: true,
+  needleColor: 'black',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  rangeLabel: ['0%', '100%'],
+  needleStartValue: 0,
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabelFontSize: 12,
+}
+
+let options3 = {
+  hasNeedle: true,
+  needleColor: '#212529',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  arcPadding: 2,
+  arcPaddingColor: 'white',
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabel: ['0%', '100%'],
+  centralLabel: '50%',
+  rangeLabelFontSize: 12,
+}
+
+  GaugeChart
+  .gaugeChart(element1, 150, options1)
+  .updateNeedle(90)
+	
+  GaugeChart
+  .gaugeChart(element2, 150, options2)
+  .updateNeedle(70)
+	
+  GaugeChart
+  .gaugeChart(element3, 150, options3)
+  .updateNeedle(50)
+
+</script>
+	
+<!--datatables--->	
+<script src="js/datatables.min.js"></script>
+<script>
+	$(document).ready(function () {
+	$('#dtBasicExample,#dtBasicExample2').DataTable();
+	$('.dataTables_length').addClass('bs-select');
+	});
+</script>
+</body>
+</html>

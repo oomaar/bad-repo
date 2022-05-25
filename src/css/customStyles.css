@@ -1,0 +1,870 @@
+/* Custom Classes Start */
+/* Global Classes Start */
+* {
+  outline: none !important;
+}
+
+.mouse-pointer {
+  cursor: pointer;
+}
+
+.error-span {
+  color: #e8635c;
+  margin-left: 0.3rem;
+}
+
+.error-input {
+  border: 1px solid #e8635c;
+  margin-bottom: 0.5rem;
+}
+
+/* DropDown Search Start */
+.dropdown-search-input input {
+  width: 90%;
+  margin: 0.5rem auto;
+}
+/* DropDown Search End */
+
+/* Custom Scroll-bar Start */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(240, 12%, 90%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(235, 47%, 48%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(240, 8%, 65%);
+}
+/* Custom Scroll-bar End */
+/* Modals Start */
+.modal-header .modal-title {
+  width: 460px;
+  overflow-wrap: break-word;
+}
+
+.modal-title h4 {
+  width: 100px !important;
+}
+/* Modals End */
+/* Google Charts Edits Start */
+.google-chart-chart-box {
+  height: 480px;
+  display: flex;
+  align-items: center;
+}
+/* Google Charts Edits End */
+/* react-gauge-chart hover Color */
+.widget-box:hover h2,
+.widget-box:focus h2 {
+  color: gray !important;
+}
+.widget-box:hover::before {
+  background-color: gray !important;
+}
+/* react-gauge-chart hover Color */
+/* rsuite-custom-class Start */
+.rsuite-custom-class {
+  position: relative;
+}
+
+.rs-picker,
+.rs-picker-daterange,
+.rs-picker-default,
+.rs-picker-toggle-wrapper,
+.rs-picker-has-value,
+.rs-picker-cleanable {
+  width: 245px;
+  outline: 0 !important;
+  box-shadow: 0 !important;
+  border: 0 !important;
+}
+
+.rsuite-custom-class .rs-picker:focus-visible {
+  outline: 0;
+  border: 0;
+}
+
+.rsuite-custom-class div {
+  border: 0 !important;
+  box-shadow: 0 !important;
+  outline: 0 !important;
+}
+
+.rs-picker-toggle-active,
+.rs-picker.rs-picker-focused {
+  box-shadow: 0 !important;
+}
+
+.rsuite-custom-class .rs-picker .rs-picker-toggle:hover,
+.rsuite-custom-class .rs-picker .rs-picker-toggle:focus {
+  border: 0 !important;
+}
+
+.rsuite-custom-class .topFilter i {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  right: 1.3rem;
+  top: 0.3rem;
+  margin-left: auto;
+  width: 5px;
+}
+
+.rs-picker-toggle {
+  box-shadow: 0 2px 6px 0 rgba(154, 161, 171, 0.15);
+}
+
+.rsuite-custom-class .topFilter:hover i {
+  color: #fff;
+}
+
+.rs-picker-toggle:hover {
+  background: #4650be !important;
+  color: #fff;
+}
+
+.rs-picker-toggle-value,
+.rs-picker-toggle-clean .rs-btn-close {
+  color: #6c757d !important;
+}
+
+.rs-picker-toggle-caret .rs-icon {
+  fill: #6c757d !important;
+}
+
+.rs-picker-toggle:hover span,
+.rs-picker-toggle:hover .rs-picker-toggle-value {
+  color: #fff !important;
+}
+
+.rs-picker-toggle-value {
+  margin-top: 0.2rem;
+  font-size: 0.85rem !important;
+}
+
+.rs-btn-default input {
+  display: none !important;
+}
+
+.rs-picker-toggle,
+.rs-btn,
+.rs-btn-default {
+  border: 0 !important;
+  transition: all 0.4s ease !important;
+  padding: 0.5rem 1rem !important;
+}
+.rs-picker-toggle:hover,
+.rs-btn:hover,
+.rs-btn-default:hover {
+  border: 0 !important;
+}
+
+.rs-picker-toggle-value {
+  margin-left: 1.2rem;
+}
+
+.rs-picker-toggle svg {
+  position: absolute !important;
+  left: 5px !important;
+  width: 0.9rem !important;
+}
+
+.rs-picker-toggle:hover svg {
+  fill: #fff !important;
+}
+
+.rs-picker-toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.rs-anim-fade,
+.rs-anim-in,
+.rs-picker-daterange-menu,
+.rs-picker-menu,
+.placement-bottom-start {
+  position: absolute !important;
+  top: 140px !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: auto !important;
+  margin-right: 1rem !important;
+  width: 650px !important;
+}
+
+.rs-picker-daterange-panel {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+
+.rs-picker-toolbar {
+  border: 0 !important;
+  border-right: 1px solid #dddddd !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rs-picker-toolbar-ranges button {
+  color: hsl(235, 0%, 0%) !important;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.5rem !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  text-transform: capitalize;
+}
+
+.rs-picker-toolbar-ranges button:hover {
+  background-color: #ddd !important;
+  text-decoration: none !important;
+}
+
+.rs-picker-toolbar-ranges button:focus {
+  background-color: hsl(235, 47%, 48%) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.rs-picker-toolbar-right button {
+  width: 100px !important;
+  background-color: hsl(235, 47%, 48%) !important;
+  padding: 0.4rem !important;
+  margin: 1rem 0 0 0;
+}
+
+.rs-picker-daterange-content {
+  display: flex !important;
+  flex-direction: column-reverse;
+}
+
+.rs-picker-daterange-header {
+  text-align: right;
+  border-top: 1px solid #ddd;
+}
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  background-color: hsl(235, 47%, 48%) !important;
+}
+
+.rs-calendar-table-cell-selected-start:hover span,
+.rs-calendar-table-cell-selected-end span {
+  color: #fff !important;
+}
+
+.rs-picker-toggle:focus-within,
+.rs-picker-toggle-active:focus-within,
+.rs-btn:focus-within,
+.rs-btn-default:focus-within {
+  border: 0 !important;
+}
+
+.rsuite-custom-class .rs-picker-toggle-wrapper .rs-picker-toggle-active {
+  box-shadow: none;
+}
+/* rsuite-custom-class End */
+
+/* Page Header Start */
+.page-header-dropdown {
+  color: #000 !important;
+}
+
+.page-header-dropdown:hover {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+}
+
+.page-header-dropdown-light-text-active {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+}
+/* Page Header End */
+
+/* User Filters Drop Down Start */
+.user-filter-dropdown-menu {
+  overflow-y: scroll;
+  max-height: 500px;
+}
+/* User Filter Drop Down End */
+/* Global Classes End */
+
+/* Table Classes Start */
+/* Table Search start */
+.table-search-row {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-end;
+  height: 65px;
+}
+
+.table-show-entries {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 35%;
+  height: 100%;
+}
+
+.table-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 65%;
+  height: 100%;
+}
+
+.dataTables_length label {
+  display: flex;
+  align-items: center;
+}
+
+/* Table Search end */
+
+/* Table Pagintaion start */
+.table-pagination-row {
+  display: flex;
+  align-items: center;
+}
+
+.table-pagination-entries {
+  display: flex;
+  align-items: flex-start;
+}
+
+.table-pagination-numbers {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Pagination Number start */
+/* button.paginate_button:focus button.page-item:focus {
+  background: #fff !important;
+  color: #4650be !important;
+} */
+/* Pagination Number end */
+/* Table Pagintaion end */
+thead th {
+  cursor: pointer;
+  width: 210px;
+  position: relative;
+}
+
+thead th::before,
+thead th::after {
+  position: absolute;
+  color: hsla(200, 100%, 100%, 0.6);
+  font-size: 0.8rem;
+}
+
+thead th::before {
+  content: "⌃";
+  top: 25%;
+  right: 3px;
+}
+
+thead th::after {
+  content: "⌄";
+  top: 30%;
+  right: 3px;
+}
+
+thead th.ascending::before {
+  color: hsla(235, 100%, 100%, 1);
+}
+
+thead th.descending::after {
+  color: hsla(235, 100%, 100%, 1);
+}
+
+td {
+  width: 210px;
+  overflow-wrap: break-word;
+}
+
+table {
+  table-layout: fixed;
+}
+
+.download-btns-container {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  margin-left: 1rem;
+}
+
+.download-btn {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.download-btn-pdf {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.download-btn-pdf button {
+  background: 0;
+  outline: 0;
+  border: 0;
+  color: #fff;
+  padding: 0;
+}
+
+.download-btn-pdf:hover {
+  opacity: 1;
+}
+
+.download-btn a {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.download-btn a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.download-btn a:focus {
+  color: #fff;
+}
+
+.download-btn a:focus-visible {
+  border: 0;
+  outline: 0;
+}
+
+.download-btn a:hover {
+  opacity: 1;
+  color: #fff;
+}
+/* Table Classaes End */
+
+/* Components start */
+/* IT Peroformance start */
+.itperformance-chart span {
+  display: none;
+}
+
+.performanceChart svg > g:nth-child(3) {
+  display: none;
+}
+
+.performanceChart svg {
+  padding-left: 1.2rem;
+}
+/* IT Peroformance end */
+
+/* App Performance Start */
+.application-performance-chart-number svg {
+  height: 100px;
+}
+.application-performance-chart-number svg text {
+  transform: translate(5px, 35px) !important;
+}
+
+.app-performance-modal {
+  padding: 1rem 0;
+}
+
+.app-performance-modal .customTab ul.nav-tabs {
+  z-index: 2;
+}
+.app-performance-modal .customTab ul.nav-tabs::before {
+  content: "";
+  width: 92%;
+  z-index: 1;
+  height: 0.5rem;
+  background-color: #4650be;
+  position: absolute;
+  top: 7.4rem;
+  border-radius: 1rem;
+}
+/* App Performance End */
+
+/* App Compliance Chart Number Start */
+.application-compliance-chart-number {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.application-compliance-chart-number svg {
+  height: 290px;
+}
+
+.application-compliance-chart-number svg text {
+  transform: translate(5px, 120px) !important;
+}
+/* App Compliance Chart Number End */
+
+/* Time Utilization Start */
+.time-date-picker {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  color: #6c7681;
+  transition: all 0.15s ease-in-out;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  position: relative;
+  box-shadow: 0 2px 6px 0 rgba(154, 161, 171, 0.15);
+}
+
+.time-date-picker:hover {
+  background-color: hsl(235, 47%, 48%);
+  color: #fff;
+}
+
+.time-date-picker .react-datepicker-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 100%;
+  padding: 0 0.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.time-date-picker .react-datepicker-wrapper {
+  overflow: hidden;
+}
+
+.time-date-picker
+  .react-datepicker-wrapper
+  .react-datepicker__input-container
+  input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #6c7681;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.time-date-picker:hover .react-datepicker-wrapper input {
+  color: #fff;
+}
+
+.time-apply-button {
+  background: hsl(235, 47%, 48%);
+  color: #fff;
+  border-radius: 0.375rem;
+  border: 0;
+  outline: 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  width: 80px;
+  transition: all 0.15s ease-in-out;
+}
+/* Time Utilization End */
+
+/* Routes Search => Navbar Start */
+.routes-search-container {
+  position: absolute;
+  z-index: 100;
+  transform: translateX(17%) translateY(-0.9rem);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 355px;
+  height: auto;
+  opacity: 1;
+  padding: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.routes-search-container-hide {
+  height: 0;
+  opacity: 0;
+  width: 0;
+  transform: translateX(10%) translateY(-100rem);
+}
+
+.routes-search-container p {
+  color: #4650be;
+  opacity: 0.8;
+  width: 100%;
+  transition: all 0.35s ease-in;
+}
+
+.routes-search-container p:hover {
+  opacity: 1;
+}
+/* Routes Search => Navbar End */
+
+/* Sidebar Start */
+.sidebar-links-list li {
+  padding: 0 !important;
+  padding-left: 2.5rem !important;
+}
+
+.sidebar-link-active {
+  background-color: rgba(255, 255, 255, 0.16);
+  font-weight: bold;
+}
+
+.sidebar-link {
+  margin: 0;
+  padding: 0;
+  margin-left: 0 !important;
+  padding-left: 2.5rem;
+}
+/* Sidebar End */
+
+/* Profile Classes Start */
+.profile-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.profile-card {
+  display: flex;
+  gap: 0 1rem;
+  margin: 1rem 0.5rem;
+  background-color: rgb(238, 242, 247);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.profile-card label {
+  color: rgb(156 163 175);
+  font-size: 1.1rem;
+  width: 40%;
+}
+
+.profile-card p {
+  font-size: 1.1rem !important;
+  flex-grow: 1;
+}
+
+.profile-button {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease-in;
+  color: hsl(235, 47%, 48%);
+}
+
+.profile-button:hover {
+  border: 1px solid hsl(235, 47%, 48%);
+}
+
+.change-password-modal-body div {
+  margin: 1rem 0;
+}
+/* Profile Classes End */
+/* Components End */
+
+/* Media Queries */
+@media screen and (max-width: 312px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    top: 290px !important;
+    /* width: 475px !important; */
+  }
+}
+
+@media screen and (max-width: 338px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    top: 247px !important;
+    /* width: 475px !important; */
+  }
+}
+
+@media screen and (max-width: 408px) {
+  /* Applications Compliance */
+  .application-compliance-chart-number {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Applications Compliance */
+  .application-compliance-chart-number {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    top: 220px !important;
+    /* width: 475px !important; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* User Drop Down */
+  .user-filter-dropdown-menu {
+    height: 200px;
+  }
+
+  /* Table Search  */
+  .table-search-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+  }
+
+  .table-show-entries {
+    justify-content: center;
+  }
+
+  .table-search {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    top: 180px !important;
+    /* width: 475px !important; */
+  }
+}
+
+@media screen and (max-width: 868px) {
+  /* Table Pagination */
+  .pagination {
+    font-size: 0.8rem;
+    margin: 0 0 0 1.4rem;
+  }
+
+  .table-pagination-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem 0;
+  }
+
+  .table-pagination-entries {
+    justify-content: center;
+  }
+
+  .table-pagination-numbers {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 931px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    width: 350px !important;
+  }
+
+  .rs-picker-daterange-panel {
+    flex-direction: column !important;
+    padding: 1rem 0;
+  }
+
+  .rs-picker-toolbar-ranges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rs-picker-toolbar-ranges button {
+    border-radius: 1rem !important;
+  }
+
+  .rs-picker-daterange-calendar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 590px;
+    border: 0 !important;
+  }
+
+  .rs-calendar {
+    border: 0 !important;
+    transform: translateX(-20%);
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1022px) {
+  /* Applications Compliance */
+  .application-compliance-chart-number svg {
+    height: 250px;
+  }
+
+  .application-compliance-chart-number svg text {
+    transform: translate(5px, 120px) !important;
+  }
+}
+
+@media screen and (max-width: 1104px) {
+  /* Date Filter */
+  .rs-anim-fade,
+  .rs-anim-in,
+  .rs-picker-daterange-menu,
+  .rs-picker-menu,
+  .placement-bottom-start {
+    top: 180px !important;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  /* Applications Compliance */
+  .application-compliance-chart-number svg {
+    height: 310px;
+  }
+
+  .application-compliance-chart-number svg text {
+    transform: translate(5px, 150px) !important;
+  }
+}
+
+@media screen and (max-width: 1436px) {
+  /* Applications Performace */
+  .app-performance-chart-details {
+    display: flex;
+    flex-direction: column;
+  }
+}

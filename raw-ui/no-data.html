@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Fly Insights</title>
+</head>
+
+<body>
+	
+<div class="wrapper">
+	<nav id="sidebar">
+	<span class="top-triangle"></span>
+		<div id="dismiss">
+			<i class="icon-right-small"></i>
+		</div>
+		<div class="sidebar-header">
+			<span class="top-triangle"></span>
+			<div class="logo"><span>Fly</span> Insights</div>
+		</div>
+        <div class="menu-title">Main Menu</div>
+		<ul id="main-menu">
+		    <li class="active"><a href="#submenu-1" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-gauge-1"></i> Dashboard</a>
+				<ul class="collapse submenu-collapse" id="submenu-1" data-bs-parent="#main-menu">
+					<li class="active"><a href="#">Application Compliance</a></li>
+					<li><a href="#">CPU Performance</a></li>
+					<li><a href="#">Memory Performance</a></li>
+					<li><a href="#">Resource Manager</a></li>
+					<li><a href="#">IT Manager</a></li>
+					<li><a href="#">Assets Manager</a></li>
+					<li><a href="#">Time Utilization</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-2" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-params"></i> App Configuration</a>
+				<ul class="collapse submenu-collapse" id="submenu-2" data-bs-parent="#main-menu">
+					<li><a href="#">Application License</a></li>
+					<li><a href="#">Allowed Applications</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-3" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-users-outline"></i> Users</a>
+				<ul class="collapse submenu-collapse" id="submenu-3" data-bs-parent="#main-menu">
+					<li><a href="#">Users Profile</a></li>
+					<li><a href="#">Users Edit</a></li>
+					<li><a href="#">Users Cards</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-4" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-calendar-8"></i> Calender</a>
+				<ul class="collapse submenu-collapse" id="submenu-4" data-bs-parent="#main-menu">
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">Draggable Calender</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="icon-clipboard-2"></i> Tasks</a></li>
+			<li><a href="#"><i class="icon-question-circle-o"></i> FAQ</a></li>
+			<li><a href="#"><i class="icon-wrench-3"></i> Maintenance</a></li>
+			
+
+		</ul>
+	</nav>
+
+	<!-- Page Content  -->
+	<div id="content">
+	    <div class="top-nav">
+			<button type="button" id="sidebarCollapse" class="btn"><i class="icon-menu-1"></i></button>
+
+		  <form class="topbar-search me-auto d-none d-md-flex">
+		  <input type="text" class="form-control" placeholder="Search projects…">
+		  <button type="button" class="btn"><i class="icon-search"></i></button>
+		  </form>
+
+
+		  <ul class="navbar navbar-expand topbar-menu">
+			  <li class="nav-item dropdown d-block d-md-none">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-search-7"></i></a>
+
+			  <div class="dropdown-menu slideIn" aria-labelledby="navbarDropdown">
+				<form class="topbar-search d-flex">
+				  <input type="text" class="form-control" placeholder="Search…">
+				  <button type="button" class="btn"><i class="icon-search"></i></button>
+				</form>
+			  </div>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="badge badge-notification rounded-pill bg-primary">4</span><i class="icon-bell"></i></a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown3" id="notification">
+				  <li class="dropdown-menu-header">4 new notifications</li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-primary icon-info-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-warning icon-warning"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-danger icon-cancel-circle"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-success icon-ok-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				  <li class="dropdown-menu-footer"><a href="#" class="text-muted">Show all notifications</a>
+				</li>
+
+			  </ul>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown user-control">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="user-pic">
+					  <img src="img/user-pic.jpg" alt=""/>
+					  <span class="user-status"></span>
+				  </i>
+				  <span class="d-none d-md-inline">
+					  <span class="userName-text">Ahmed Ramzy Adel</span>
+					  <small>General manager</small>
+				  </span>
+			  </a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown4">
+				<li><a class="dropdown-item" href="#"><i class="icon-user-2"></i> My profile</a></li>
+				<li><a class="dropdown-item" href="#"><i class="icon-logout-2"></i> Log out</a></li>
+			  </ul>
+			  </li><!--dropdown-->
+		  </ul>  
+		  </div><!--top-nav-->
+		
+		<div class="page-container">
+			<div class="page-title d-xl-flex">
+				<h1 class="me-auto">IT Performance</h1>
+				
+				<div class="topFilter row g-2">
+					<div class="col-auto">
+						<div class="selectpicker-iconUsers">
+						<select class="selectpicker" data-live-search="true">
+						  <option>All Users</option>
+						  <option>Ahmed Ramzy</option>
+						  <option>Mahmoud Hadad</option>
+						  <option>Ayman Eid</option>
+						</select>
+						</div><!--selectpicker-icon-->
+					</div><!--col-auto-->
+					<div class="col-auto">
+						<div class="selectpicker-iconGroup">
+						<select class="selectpicker" data-live-search="true">
+						  <option>All Groups</option>
+						  <option>Group 1</option>
+						  <option>Group 2</option>
+						  <option>Group 3</option>
+						  <option>Group 4</option>
+						</select>
+						</div><!--selectpicker-icon-->
+					</div><!--col-auto-->
+					<div class="col-auto">
+						<div id="reportrange" class="btn btn-light">
+							<i class="icon-calendar-inv"></i>&nbsp;
+							<span></span>
+							<i class="icon-down-open-mini"></i>
+						</div><!--reportrange-->
+					</div><!--col-auto-->
+				</div><!--topFilter-->
+			</div><!--page-title-->
+			
+			<div class="white-box m-0">
+				<div class="noData">
+					<div class="align-middle">
+					<i><img src="img/no-data.png" alt=""/></i>
+					<p>No Data Found !</p>
+					</div>
+				</div><!--noData-->
+		  </div><!--white-box-->
+			
+		</div><!--page-container-->
+		<p class="copyright2">Copyright © 2022 Fly Insights.</p>
+	</div><!--content-->
+</div>
+	
+<div class="overlay"></div>
+	
+<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+<!--Scrollbar-sidebarCollapse--->
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#sidebar").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+	$("#notification").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+
+	$('#dismiss, .overlay').on('click', function () {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar, #content').toggleClass('active');
+		$('.overlay').addClass('active');
+		$('.collapse.in').toggleClass('in');
+		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	});
+});
+</script>
+
+<!--selectpicker-->
+<script src="js/bootstrap-select.min.js"></script>
+<script>
+$('.selectpicker').selectpicker();
+</script>
+	
+<!--daterangepicker-->
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+	
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
+	
+<!--gauge-charts-->
+<script src="js/gauge-chart.js"></script>
+<script>
+// Element inside which you want to see the chart.
+
+let element1 = document.querySelector('#gaugeChart1')
+let element2 = document.querySelector('#gaugeChart2')
+let element3 = document.querySelector('#gaugeChart3')
+
+
+let options1 = {
+  hasNeedle: true,
+  needleColor: '#212529',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  //arcPadding: 1,
+  //arcPaddingColor: 'white',
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabel: ['0%', '100%'],
+  centralLabel: '90%',
+  rangeLabelFontSize: 12,
+}
+
+let options2 = {
+  hasNeedle: true,
+  needleColor: 'black',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  rangeLabel: ['0%', '100%'],
+  needleStartValue: 0,
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabelFontSize: 12,
+}
+
+let options3 = {
+  hasNeedle: true,
+  needleColor: '#212529',
+  arcColors: ['rgb(250, 95, 17)', 'rgb(253, 138, 0)', 'rgb(254, 174, 0)', 'rgb(72, 166, 76)'],
+  arcDelimiters: [25, 50, 75],
+  arcPadding: 2,
+  arcPaddingColor: 'white',
+  arcLabels: ['25%', '50%', '75%' , '100%'],
+  arcLabelFontSize: 10,
+  rangeLabel: ['0%', '100%'],
+  centralLabel: '50%',
+  rangeLabelFontSize: 12,
+}
+
+  GaugeChart
+  .gaugeChart(element1, 150, options1)
+  .updateNeedle(90)
+	
+  GaugeChart
+  .gaugeChart(element2, 150, options2)
+  .updateNeedle(70)
+	
+  GaugeChart
+  .gaugeChart(element3, 150, options3)
+  .updateNeedle(50)
+
+</script>
+	
+<!--datatables--->	
+<script src="js/datatables.min.js"></script>
+<script>
+	$(document).ready(function () {
+	$('#dtBasicExample,#dtBasicExample2').DataTable();
+	$('.dataTables_length').addClass('bs-select');
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+@import 'fonts';
+@import 'colors';
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+/******************** Login Page *******************/
+
+.login-bg{ width: 100%; min-height: 100vh; @include flexCenter; @include photoBgCover; padding: $padding-15; background-color: $blueColor-dark4;}
+.login { width: 1050px;
+	.col-md-5{ background-color:$blueColor; box-shadow: $box-shadow;}
+	.col-md-7{ background-color:$whiteColor; box-shadow: $box-shadow;}
+}
+
+.login-form{ padding: 9rem 2.5rem 2.5rem;
+	.login-icon{ text-align: center; font-size: $font-20; color: $whiteColor; margin-bottom: $margin-30;
+		i{ display: block; margin-bottom: $margin-15;}
+	}
+	form{ max-width: 280px; margin: 0 auto $margin-80;
+		.form-control{ border: none; background-color: $blueColor-dark2; height: 44px; color: $whiteColor; border-radius: $radius-8; font-size: $font-14; padding-left: $padding-60; transition: $transition-3s;
+			&::placeholder {color: rgba(255,255,255,.6);}
+			&:focus{ box-shadow: none; background-color: $blueColor-dark1;}
+		}
+		.inputIcon{ position: relative;
+			i{ position: absolute; left: 0; top: 0; z-index: 1; background-color: $blueColor-dark3; width: 44px; height: 44px; border-radius: $radius-8; color: rgba(255,255,255,.6); font-size: $font-16; text-align: center; line-height: 44px;}
+		}
+		.btn{ background-color: $redColor; color: $whiteColor; border-radius: $radius-8; height: 44px; width: 100%; box-shadow: 0 0 16px rgba(0,0,0,.1);
+			&:hover, &:focus{ background-color: $redColor-dark2;}
+		}
+	}
+	.copyright{ text-align: center; color: $whiteColor; font-size: $font-14; opacity: .6;
+		span{ font-weight: 500;}
+	}
+}
+
+.login-about{ padding: 2.5rem;
+	.logo{font-size: $font-28; color: $grayColor4; font-weight: 500;
+		span{ font-weight: 600; color: $blueColor;}
+	}
+	.pic{ padding: $padding-80 0; text-align: center;}
+	h1{ color: $blueColor; text-align: center; font-size: $font-22;
+		span{ font-weight: 600;}
+	}
+	p{ font-size: $font-14; text-align: center; margin: 0;}
+}
+
+@media (max-width: 1199px) {
+	.login { width: 100%;}
+}
+
+@media (max-width: 767px) {
+	.login { width: 100%;}
+	.login-form , .login-about { padding: 2.5rem; text-align: center;
+		form{ margin-bottom: $margin-30; max-width: 100%;}
+	}
+	.login-about {
+		.pic , h1, p{ display: none;}
+	}
+}
+
+/************** sidebar *************/
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    color: #fff;
+    transition: $transition-3s;
+	background: $blueColor;
+	color: $whiteColor;
+}
+
+#sidebar.active {
+    margin-left: -260px;
+}
+
+#content {
+    width: calc(100% - 260px);
+    min-height: 100vh;
+    transition: $transition-3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+#dismiss { display: none;
+  .icon-right-small::before {
+    content: '\ea58';}
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -260px;
+		background: $blueColor;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+	
+	.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    opacity: 0;
+    transition: $transition-3s;
+}
+	
+	.overlay.active {
+    display: block;
+    opacity: 1;
+    }
+	
+	#dismiss {
+		display: block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background: $blueColor-light;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		transition: $transition-3s;
+		&:hover {
+		background: $whiteColor;
+		color: $blueColor;}
+		}
+}
+
+/*** dropdown-menu animate **/
+
+@media (min-width: 768px) {
+	@keyframes slideIn {
+	  0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	  }
+
+	  100% {
+		transform: translateY(0rem);
+		opacity: 1;
+	  }
+
+	  0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	  }
+	}
+
+	.slideIn {
+	  animation-name: slideIn;
+	  animation-duration: 0.3s;
+	  -webkit-animation-duration: 0.3s;
+	  animation-fill-mode: both;
+	  -webkit-animation-fill-mode: both;
+	}
+}
+
+/**************************************************
+***************** Global Elements *****************
+**************************************************/
+
+.btn{ border-radius: $radius-6;}
+.bg-primary{background-color: $primaryColor !important;}
+.text-primary { color: $blueColor !important;}
+.bg-secondary { background-color: $secondaryColor !important;}
+.text-secondary { color: $secondaryColor !important;}
+.bg-success { background-color: $successColor !important;}
+.text-success { color: $successColor !important;}
+.bg-danger { background-color: $dangerColor !important;}
+.text-danger { color: $dangerColor !important;}
+.bg-warning { background-color: $warningColor !important;}
+.text-warning { color: $warningColor !important;}
+.bg-dark { background-color: $darkColor !important;}
+.text-dark { color: $darkColor !important;}
+
+.btn-list .btn {margin: $padding-2;}
+.btn{ padding: $padding-8 $padding-15; font-size: $font-15; font-weight: 500;}
+.btn-primary{ background-color: $primaryColor; border-color: $primaryColor; box-shadow: 0 2px 6px 0 rgba($primaryColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $primaryColor-dark; border-color: $primaryColor-dark; box-shadow: 0 2px 6px 0 rgba($primaryColor-dark,.35) !important;}
+}
+.btn-secondary{ background-color: $secondaryColor; border-color: $secondaryColor; box-shadow: 0 2px 6px 0 rgba($secondaryColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $secondaryColor-dark; border-color: $secondaryColor-dark; box-shadow: 0 2px 6px 0 rgba($secondaryColor-dark,.35) !important;}
+}
+.btn-red{ background-color: $redColor; border-color: $redColor; box-shadow: 0 2px 6px 0 rgba($redColor,.35); color: $whiteColor;
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $redColor-dark2; border-color: $redColor-dark2; box-shadow: 0 2px 6px 0 rgba($redColor-dark2,.35) !important; color: $whiteColor;}
+}
+.btn-success{ background-color: $successColor; border-color: $successColor; box-shadow: 0 2px 6px 0 rgba($successColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $successColor-dark; border-color: $successColor-dark; box-shadow: 0 2px 6px 0 rgba($successColor-dark,.35) !important;}
+}
+.btn-danger{background-color: $dangerColor; border-color: $dangerColor; box-shadow: 0 2px 6px 0 rgba($dangerColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $dangerColor-dark; border-color: $dangerColor-dark; box-shadow: 0 2px 6px 0 rgba($dangerColor-dark,.35) !important;}
+}
+.btn-warning{background-color: $warningColor; border-color: $warningColor; box-shadow: 0 2px 6px 0 rgba($warningColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $warningColor-light; border-color: $warningColor-light; box-shadow: 0 2px 6px 0 rgba($warningColor-light,.35) !important;}
+}
+.btn-info{ background-color: $infoColor; border-color: $infoColor; box-shadow: 0 2px 6px 0 rgba($infoColor,.35); color: #FFF;
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $infoColor-dark; border-color: $infoColor-dark; box-shadow: 0 2px 6px 0 rgba($infoColor-dark,.35) !important; color: #FFF;}
+}
+.btn-light{background-color: $lightColor; border-color:$lightColor; box-shadow: 0 2px 6px 0 rgba($lightColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $lightColor-dark; border-color: $lightColor-dark; box-shadow: 0 2px 6px 0 rgba($lightColor-dark,.35) !important;}
+}
+.btn-dark{ background-color: $darkColor; border-color: $darkColor; box-shadow: 0 2px 6px 0 rgba($darkColor,.35);
+	&:hover , &:focus , &:focus:not(:focus-visible) { background-color: $darkColor-dark; border-color: $darkColor-dark; box-shadow: 0 2px 6px 0 rgba($darkColor-dark,.35) !important;}
+}
+/****/
+.btn-outline-secondary{ box-shadow: 0 2px 6px 0 rgba($secondaryColor,.2);
+	&:hover , &:focus , &:focus:not(:focus-visible) { box-shadow: 0 2px 6px 0 rgba($secondaryColor-dark,.2) !important;}
+}
+/***/
+.btn-link{color: $primaryColor-dark;}
+.btn-lg{font-size: $font-20; padding: $padding-8 $padding-20;}
+.btn-sm{font-size: $font-14; padding: $padding-5 $padding-10;}
+
+hr{ opacity: .1;}
+
+.form-label{ margin-bottom: $margin-5; color: $grayColor4; font-size: $font-14;}
+.form-control{ font-size: $font-15;
+	&:focus{ box-shadow: none; border-color: $grayColor3;}
+	&::placeholder { color: rgba(102,102,102,.6);}
+}
+
+/****************************/
+.sidebar-header {padding: $padding-40 $padding-24; text-align: center;
+	.top-triangle{ display: block; width: 0; height: 0; border-left: 0 solid transparent; border-right: 18px solid transparent; border-top: 18px solid $whiteColor; position: absolute; left: 10px; top: 10px;}
+	.logo{ font-size: $font-22; font-weight: 500; color: $whiteColor;
+		span{ color: $babyBlueColor; font-weight: 600;}
+	}
+}
+.menu-title{ padding: 0 $padding-24 $padding-10; font-size: $font-14; color: rgba($whiteColor,.6);}
+
+/************ Menu ***********/
+
+#main-menu { padding: 0 $padding-24;
+li a{ display: block; color: rgba($whiteColor,.8); font-size: $font-16;
+	&:hover, &:focus{color: $whiteColor;}
+	}
+	> li{ border-bottom: 1px solid rgba($whiteColor,.08);
+	&:last-child{ border-bottom: 0;}
+	}
+	> li > a{ padding: $padding-15 0;
+	i{ margin-right: $margin-10;}
+	[class^="icon-"]::before{ margin: 0;}
+	}
+	> .active > a{ background: $redColor; color: $whiteColor; margin-right: -$margin-24; margin-left: -$margin-24; padding: $padding-15 $padding-24;
+		&:hover, &:focus{background: $redColor; color: $whiteColor;}
+	}
+	.submenu-collapse{ background-color: $blueColor-dark1; margin-right: -$margin-24; margin-left: -$margin-24;
+	li{ margin-left: $margin-40;
+		a{ padding: $padding-8 $padding-15; font-size: $font-15;}
+		&:first-child{ padding-top: $padding-10;}
+		&:last-child{ padding-bottom: $padding-10;}
+	}	
+	.active a{ color:  $whiteColor;}
+	}
+}
+.dropdown-toggle::after { font-family: 'fontello'; content: '\e93d'; border: none; float: right; margin-left: .4rem;}
+.dropdown-toggle[aria-expanded="false"]::after { content: '\e93a';}
+
+/************** Topbar ****************/
+
+#sidebarCollapse{ font-size: $font-24; color: $blueColor; padding: 0; height: 70px; line-height: 70px; width: 60px; margin-left: -$margin-24;
+&:hover , &:focus{ color: $blueColor-dark3;}}
+
+.top-nav {padding: 0 $padding-24; background-color: $whiteColor; box-shadow: $box-shadow; min-height: 70px; border-radius: $margin-10 $margin-10 0 0; position: relative; @include flexCenter-x;}
+
+.topbar-search{
+	.form-control{border-radius: $radius-6 0 0 $radius-6; padding: $padding-5 $padding-15; font-size: $font-16; border-color: $grayColor2; width: 320px; border-right: none;
+	&:focus{ border-color: $grayColor3; box-shadow: none;}}
+	@media (max-width: 992px) {.form-control{ width: 126px;}}
+	.btn{ border: 1px solid $grayColor2; color: $blueColor; font-size: $font-15; border-radius:0 $radius-6 $radius-6 0; padding: $padding-8; border-left: none; position: relative;
+		&::after{ content: " "; border-left: 1px solid $grayColor2; position: absolute; left: 0; top: 8px; bottom: 8px;}
+		&:hover , &:focus{ border-color: $grayColor3; color: $blueColor-dark3;}
+	}	
+}
+
+.dropdown-menu{ box-shadow: $box-shadow; padding: 0; font-size: $font-13;color: $grayColor4; border: none;
+	li{ border-bottom: 1px solid $grayColor1;}
+	li:last-child{ border: none;}
+	.dropdown-item{ color: $grayColor4; padding: $padding-10 $padding-15; white-space: normal;
+	&:hover, &:focus{ background-color:$grayColor1;}
+	}
+}
+
+.topbar-menu {padding: 0;
+	.nav-link{ color: $grayColor3; font-size: $font-14; padding: $padding-8;
+		i{font-size: $font-18;}}
+	.dropdown-menu{ left: inherit; right: 0;}
+	.dropdown-toggle::after { display: none;}
+	
+}
+
+.user-control {
+	.dropdown-toggle::after { margin-top: $margin-8; font-size: 1rem; display: block;}
+	.nav-link{
+	background-color: $grayColor1; height: 70px; border-left: 1px solid $grayColor1; margin:0 -1.5rem 0 $margin-20; border-radius: 0 $radius-10 0 0; padding: $padding-20; display: flex; line-height: 110%;
+	&:hover, &:focus{background-color: $grayColor1;}}
+    .userName-text{ display: block; @include textOverflow; max-width: 110px; color: $grayColor4;}
+	.nav-link small{color: #98a6ad;}
+    .user-pic{ margin: -$margin-5 $margin-10 0 0; position: relative;
+		img{ width: 40px; height: 40px; border-radius: $radius-100;}
+		.user-status{ position: absolute; right: 0; bottom: -3px; width: 10px; height: 10px; background-color: $successColor; border-radius: $radius-100;}
+	}
+}
+
+.badge-notification{ position: absolute; top: 0; right: 3px; padding: .35em .55em;}
+#notification { max-height: 320px; min-width: 300px;
+	h6{font-size: $font-13; margin-bottom: .3rem; color: $blueColor;}
+	i{ font-size: $font-18;}
+	p{ margin-bottom: .3rem;}
+	.col-2{ text-align: center;}
+	.dropdown-menu-header{ text-align: center; font-weight: 500; font-size: $font-14; padding: $padding-10;}
+    .dropdown-menu-footer a{ display: block; text-align: center; padding: $padding-10;
+	&:hover{ color: $grayColor5 !important;}}
+}
+
+@media (max-width: 768px) {
+.user-control .user-pic{ margin-right: 0;}
+#notification { min-width: 250px;}
+.white-wrapper{margin:$margin-10;}
+}
+
+#content {.mCSB_dragger_bar{ background-color: $blueColor;}}
+
+/**********************************/
+
+.page-container{ padding: $padding-24 $padding-24 0; min-height: 83vh;}
+.page-title { margin-bottom: $margin-24;
+	h1{color: $grayColor4;}
+	.topFilter{ 
+		.selectpicker-iconUsers , .selectpicker-iconGroup { 
+			.btn-light{ width: 130px; white-space: nowrap;
+			    &:focus { outline: none !important;}
+			}
+			.btn-light::before{font-family: "fontello"; content: "\e8ce"; margin: -$margin-2 $margin-5 0 0;}
+		}
+		.selectpicker-iconGroup {
+			.btn-light::before{ content: "\ecfe";}
+		}
+		
+		.btn-light{ background-color: $whiteColor; color: $grayColor4; font-size: $font-14; box-shadow: $btn-shadow; border: none; font-weight: 400;
+			&:last-child{ margin-right: 0;}
+			&:hover, &:focus{ background-color: $blueColor; color: $whiteColor;}
+		}
+		@media (max-width: 992px) { text-align: center;}
+	}
+}
+.white-box{ box-shadow: $box-shadow; background-color: $whiteColor; border-radius: $radius-8;padding: $padding-20; margin-bottom: $margin-24;}
+.widgets{ margin-bottom: $margin-24;}
+.widget-box{box-shadow: $box-shadow; background-color: $whiteColor; border-radius: $radius-8; display: flex; position: relative; height: 100%;
+	&::before{ content: " "; width: 6px; position: absolute; top: 20px; bottom: 20px; left: -6px; background-color: $blueColor; border-radius: $radius-8 0 0 $radius-8; transition: $transition-3s;}
+	.widget-info{ flex: 1 1 auto; padding: $padding-20;
+		h2{ color: $blueColor; font-size: $font-20; font-weight: 600; margin-bottom: $margin-10; transition: $transition-3s;}
+		h1{ color: $grayColor4; margin: 0; font-size: $font-22;}
+		p{ color: $grayColor3; font-size: $font-13; margin: 0;}
+	}
+	.widget-chart{ box-shadow: $box-shadow; background-color: $whiteColor; border-radius: 0 $radius-8 $radius-8 0; padding: $padding-24 0; display: flex; align-items: center;}
+	&:hover h2, &:focus h2{ color: $redColor;}
+	&:hover::before{ background-color: $redColor;}
+}
+
+.copyright2{ text-align: center; margin: 0; padding: $padding-10; font-size: $font-14; color: $grayColor3;}
+
+@media (max-width: 768px) {
+	.page-container{ min-height: 100%;}
+	
+}
+
+/************** Table **************/
+
+.table{ font-size: $font-15; color: $grayColor5;
+	> :not(caption) > * > * { padding: $padding-15;}
+	> :not(:first-child) { border-top: none;}
+	th{ background: $primaryColor; color: $whiteColor; font-weight: 500;}
+	th:nth-of-type(2n+2) { background: $blueColor-dark1;}
+	tfoot{ background-color: $primaryColor; color: $whiteColor;
+		td{padding: $padding-5;}}
+	.edit-icon {color: $warningColor-dark;}
+	.delete-icon {color: $dangerColor;}
+	.view-icon {color: $primaryColor;}
+}
+.table-striped > tbody > tr:nth-of-type(2n+1) > *{color: $grayColor5;}
+.table-sm{ font-size: $font-14;
+	> :not(caption) > * > * { padding: $padding-12;}	
+}
+/*********** pagination ************/
+
+.page-link{ color: $primaryColor;
+	&:focus{ background-color: $primaryColor !important; color: $whiteColor;}	
+}
+.page-item{
+	&.active .page-link {background-color: $primaryColor; border-color: $primaryColor;}
+}
+
+/******************* Tabs ******************/
+
+.customTab{
+	.tab-content{ @extend .white-box; position: relative; z-index: 1;}
+	.nav-tabs{ border-bottom: none; padding: 0 $padding-24;
+		&::after{ content: " "; height: 10px; width: 100%; background-color: $primaryColor; border-radius: $radius-8 $radius-8 0 0; position: relative; z-index: -1; margin-top: -10px;}
+		.nav-link{ border: none; background-color: $whiteColor; box-shadow: $box-shadow; border-top-left-radius: $radius-8; border-top-right-radius: $radius-8; font-size: $font-16; color: $grayColor4; padding: $padding-12 $padding-24; margin: 0;
+		&:hover{ color: $primaryColor;}
+		}
+		.active{ background-color: $primaryColor; color: $whiteColor;
+		&:hover{ @extend .active;}
+		}
+	}	
+}
+
+@media (max-width: 1200px) {
+	.customTab {
+		.nav-tabs .nav-link{ font-size: $font-15; padding: $padding-10 $padding-15;}
+	}
+}
+@media (max-width: 992px) {
+	.customTab{
+		.nav-tabs{ justify-content: center; margin-bottom: $margin-5;
+			&::after{ display: none;}
+		}
+		.nav-tabs .nav-link{ font-size: $font-14;border-radius: $radius-8; margin: $margin-2;}
+	}
+}
+@media (max-width: 768px) {
+	.customTab {
+		.nav-tabs .nav-link{ font-size: $font-13; padding: $padding-8 $padding-10;}
+	}
+}
+
+.customTab .tab-content > .tab-pane {
+    display: block;
+    height: 0;
+    overflow: hidden;
+	visibility: hidden;
+}
+.customTab .tab-content > .tab-pane.active {
+    height: auto;
+	visibility: visible;
+}
+
+/************** daterangepicker **************/
+
+.daterangepicker{ box-shadow: $box-shadow; padding: 0; font-size: $font-13;color: $grayColor4; border: none;
+	li{ border-bottom: 1px solid $grayColor1;}
+	li:last-child{ border: none;}
+	.dropdown-item{ color: $grayColor4; padding: $padding-10 $padding-15; white-space: normal;
+	&:hover, &:focus{ background-color:$grayColor1;}
+	}
+	&::before { border: none;}
+	.ranges li.active , td.active , td.active:hover{background-color: $primaryColor;}
+}
+
+/**************bootstrap-select***************/
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) { width: 100%;}
+.bootstrap-select{
+	.dropdown-toggle {white-space: normal;}
+	.bs-searchbox .form-control{ padding: $padding-2 $padding-10;
+		&:focus {border-color: $grayColor2; box-shadow: none;}
+	}
+	.bs-ok-default::after { transform: rotate(0deg); border: none; font-family: "fontello"; content: "\eb89"; color: #5c58a0;}
+	.dropdown-toggle::after { font-family: "fontello"; content: "\e93a";border: none;}
+	.dropup .dropdown-toggle::after { font-family: "fontello"; content: "\e93a"; border: none;}
+	.dropdown-item.active, .dropdown-item:active { color: #fff; background-color: $primaryColor;
+}
+	
+}
+
+/************** Sort Table **************/
+
+.bs-select .custom-select{ padding: .375rem 1.75rem .375rem .75rem; margin:0 .3rem; background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;}
+table.dataTable{ margin: 0;}
+table.dataTable thead .sorting::before, table.dataTable thead .sorting_asc::before, table.dataTable thead .sorting_desc::before, table.dataTable thead .sorting_asc_disabled::before, table.dataTable thead .sorting_desc_disabled::before {
+  right: 1em;
+  font-family: "fontello", sans-serif;
+  font-weight: normal;
+  content: "\e93d";
+  top: 50%;
+  margin-top: -1rem;
+}
+
+table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after, table.dataTable thead .sorting_asc_disabled::after, table.dataTable thead .sorting_desc_disabled::after {
+  right: 16px;
+  font-family: "fontello", sans-serif;
+  font-weight: normal;
+  content: "\e93a";
+  top: 50%;
+  margin-top: -.5rem;
+}
+
+/******** Modal *******/
+
+.modal-content{ background-color: $grayColor1; border-radius: $radius-8; border: none; position: relative; overflow: inherit !important;
+	&::before{ content: " "; height: 12px; position: absolute; left: 20px; right: 20px; top: -12px; background-color: $blueColor; border-radius: $radius-8 $radius-8 0 0;}
+	.modal-header{ border: none;
+	  .modal-title{ font-size: $font-22;}
+	  .btn-close{ background: none; line-height: 100%; font-size: $font-24;
+		&::before{  font-family: "fontello"; content: '\e8d6';}}
+	}
+	.modal-body{ box-shadow: $box-shadow; background-color: $whiteColor; border-radius: $radius-8;padding: $padding-20; margin: 0 $margin-20 $margin-20;}
+	.modal-footer{ justify-content: center; padding: $padding-10; background-color: $grayColor1; border: none; margin-top: - $margin-20;}
+}
+
+/******** popUpModal *******/
+
+.popUpModal{
+	.modal-body{ margin: 0; box-shadow: none; padding: $padding-24;}
+	.flex-shrink-0 i{ background-color: $grayColor1; width: 80px; height: 80px; border-radius: $radius-100; font-size: 2.2rem; display: block; text-align: center; padding-top: $padding-20; color: $grayColor5; margin-right: $margin-20;}
+	h4{ margin: $margin-5 0;}
+	p{ margin: 0; font-size: $font-15;}
+	.popUpModalBtn{ margin-top: $margin-15; text-align: right;
+		.btn{ margin-left: $margin-2;}
+	}
+	.btn-close{ position: absolute; top: 10px; right: 10px; background-size: 12px;}
+}
+
+/********** No Data *********/
+
+.noData{ display: flex; justify-content: center; align-items: center; min-height: 63vh; text-align: center; padding: $padding-30;
+	i{ margin-bottom: $margin-30; display: block;}
+	p{ margin: 0; font-size: $font-20; font-weight: 500;}
+}
+@media (max-width: 768px) {
+	.noData{ min-height: 100%;}
+}
+
+/*********************/
+
+.chart-box{ border: 1px solid $grayColor2; border-radius: $radius-8; padding: $padding-15; position: relative; margin: $margin-50 0 0 6px;
+	&::before{ content: " "; width: 6px; position: absolute; top: 20px; bottom: 20px; left: -6px; background-color: $blueColor; border-radius: $radius-8 0 0 $radius-8;}
+	h3{ color: $primaryColor; margin: 0 0 $margin-20; text-align: center;}
+	.gauge-info{}
+	.gaugeChart { display: table; margin: auto;}
+	.countNo{ background-color: $grayColor1; border-radius: $radius-8; padding: $padding-15; height: 100%;
+		h1{ margin: 0; color: $blueColor;}
+		p{ margin: 0; font-size: $font-13; line-height: 100%;}
+	}
+	.performanceChart { overflow: hidden;}
+	.performanceChart > div{ margin-top: -70px;}
+}
+@media (max-width: 1199px) {
+	.chart-box{ margin:0 0 $margin-30 6px;}
+}
+@media (max-width: 384px) {
+	.chart-box .gaugeChart { margin-left: -35px;}
+}
+
+/******************************/
+
+.page-title .topFilter .w-auto .btn-light{ width: auto;}
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+	.performanceChart{
+	> div { min-width: 140%; margin-left: -18%;}
+    }
+}
+
+.pdf-btn{ margin-top: 8px; float: right;
+	.btn{ font-size: 0.75rem; padding: 0.35rem 0.4rem;}
+}
+
+@media (max-width: 992px) {
+	.pdf-btn{ margin: 0 0 10px 0; float: none;}
+}
+
+/** ِAlert **/
+
+.alert{display: flex; padding: 0; color: $grayColor6; font-size: $font-14; line-height: 1.5;
+.alert-icon { background: rgba($whiteColor,.2); padding: $padding-15;}
+.alert-message {padding: $padding-15; width: 100%;}
+}
+.alert-dismissible {padding-right: $padding-30;
+	.btn-close{ font-size: $font-12; padding: $padding-20 $padding-15;
+		&:focus{ box-shadow: none;}}
+}
+
+/*****************/
+
+.chart_TimeUtilization{ overflow: hidden; position: relative;
+	h3{ color: $primaryColor; margin: 0 0 $margin-20; text-align: center; position: relative; z-index: 1;}
+	 > div{ margin-top: -30px; margin-bottom: -5px; min-width: 120%; margin-left: -9%;}
+	.vAxis{ position: absolute; left: -45px; bottom: 45%; z-index: 2; transform: rotate(-90deg); font-size: $font-12;}
+}
+.timeUtilization-info{
+	.card{ margin-bottom: $margin-5;}
+	.card-body{ padding: .8rem 1rem;}
+	.col-xl-4{ color: $primaryColor; font-weight: 500;}
+	span{ color: $grayColor3; font-size: $font-13;}
+}
+
+/**************/
+
+.accordion-button:not(.collapsed) {
+	color: $whiteColor;
+    background-color: $primaryColor;
+	&::after {
+	  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");}
+}
+
+

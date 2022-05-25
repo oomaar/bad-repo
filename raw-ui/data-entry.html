@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Fly Insights</title>
+</head>
+
+<body>
+	
+<div class="wrapper">
+	<nav id="sidebar">
+	<span class="top-triangle"></span>
+		<div id="dismiss">
+			<i class="icon-right-small"></i>
+		</div>
+		<div class="sidebar-header">
+			<span class="top-triangle"></span>
+			<div class="logo"><span>Fly</span> Insights</div>
+		</div>
+        <div class="menu-title">Main Menu</div>
+		<ul id="main-menu">
+		    <li class="active"><a href="#submenu-1" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-gauge-1"></i> Dashboard</a>
+				<ul class="collapse submenu-collapse" id="submenu-1" data-bs-parent="#main-menu">
+					<li class="active"><a href="#">Application Compliance</a></li>
+					<li><a href="#">CPU Performance</a></li>
+					<li><a href="#">Memory Performance</a></li>
+					<li><a href="#">Resource Manager</a></li>
+					<li><a href="#">IT Manager</a></li>
+					<li><a href="#">Assets Manager</a></li>
+					<li><a href="#">Time Utilization</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-2" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-params"></i> App Configuration</a>
+				<ul class="collapse submenu-collapse" id="submenu-2" data-bs-parent="#main-menu">
+					<li><a href="#">Application License</a></li>
+					<li><a href="#">Allowed Applications</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-3" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-users-outline"></i> Users</a>
+				<ul class="collapse submenu-collapse" id="submenu-3" data-bs-parent="#main-menu">
+					<li><a href="#">Users Profile</a></li>
+					<li><a href="#">Users Edit</a></li>
+					<li><a href="#">Users Cards</a></li>
+				</ul>
+			</li>
+		    <li><a href="#submenu-4" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="icon-calendar-8"></i> Calender</a>
+				<ul class="collapse submenu-collapse" id="submenu-4" data-bs-parent="#main-menu">
+					<li><a href="#">Calender</a></li>
+					<li><a href="#">Draggable Calender</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><i class="icon-clipboard-2"></i> Tasks</a></li>
+			<li><a href="#"><i class="icon-question-circle-o"></i> FAQ</a></li>
+			<li><a href="#"><i class="icon-wrench-3"></i> Maintenance</a></li>
+			
+
+		</ul>
+	</nav>
+
+	<!-- Page Content  -->
+	<div id="content">
+	    <div class="top-nav">
+			<button type="button" id="sidebarCollapse" class="btn"><i class="icon-menu-1"></i></button>
+
+		  <form class="topbar-search me-auto d-none d-md-flex">
+		  <input type="text" class="form-control" placeholder="Search projects…">
+		  <button type="button" class="btn"><i class="icon-search"></i></button>
+		  </form>
+
+
+		  <ul class="navbar navbar-expand topbar-menu">
+			  <li class="nav-item dropdown d-block d-md-none">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="icon-search-7"></i></a>
+
+			  <div class="dropdown-menu slideIn" aria-labelledby="navbarDropdown">
+				<form class="topbar-search d-flex">
+				  <input type="text" class="form-control" placeholder="Search…">
+				  <button type="button" class="btn"><i class="icon-search"></i></button>
+				</form>
+			  </div>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="badge badge-notification rounded-pill bg-primary">4</span><i class="icon-bell"></i></a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown3" id="notification">
+				  <li class="dropdown-menu-header">4 new notifications</li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-primary icon-info-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-warning icon-warning"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-danger icon-cancel-circle"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				<li><a class="dropdown-item" href="#"> 
+				  <div class="row g-0 align-items-center">
+						<div class="col-2">
+							<i class="text-success icon-ok-circled"></i>
+						</div>
+						<div class="col-10">
+							<h6>User has been Created</h6>
+							<p>Log out and log back in to view the new user</p>
+							<div class="text-muted small">2 hours ago</div>
+						</div>
+					</div>
+					</a>
+				  </li>
+				  <li class="dropdown-menu-footer"><a href="#" class="text-muted">Show all notifications</a>
+				</li>
+
+			  </ul>
+			  </li><!--dropdown-->
+			  <li class="nav-item dropdown user-control">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  <i class="user-pic">
+					  <img src="img/user-pic.jpg" alt=""/>
+					  <span class="user-status"></span>
+				  </i>
+				  <span class="d-none d-md-inline">
+					  <span class="userName-text">Ahmed Ramzy Adel</span>
+					  <small>General manager</small>
+				  </span>
+			  </a>
+
+			  <ul class="dropdown-menu slideIn" aria-labelledby="navbarDropdown4">
+				<li><a class="dropdown-item" href="#"><i class="icon-user-2"></i> My profile</a></li>
+				<li><a class="dropdown-item" href="#"><i class="icon-logout-2"></i> Log out</a></li>
+			  </ul>
+			  </li><!--dropdown-->
+		  </ul>  
+		  </div><!--top-nav-->
+		
+		<div class="page-container">
+			<div class="page-title d-xl-flex">
+				<h1 class="me-auto">Data Entry</h1>
+			</div><!--page-title-->
+			
+			<div class="white-box m-0">
+			<div class="table-responsive-lg">
+			<table id="dtBasicExample" class="table table-striped">
+			  <thead>
+				<tr>
+				  <th class="th-sm">Application name</th>
+				  <th class="th-sm">User name</th>
+				  <th class="th-sm">Mac address</th>
+				  <th class="th-sm">Device</th>
+				  <th class="th-sm" width="80">Edit</th>
+				  <th class="th-sm" width="80">Delete</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>Microsoft Edge</td>
+				  <td>Ahmed Ramzy</td>
+				  <td>02-202-2034</td>
+				  <td>Dell S2154</td>
+				  <td><a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-pencil-alt-1"></i></a></td>
+				  <td><a href="#" class="delete-icon" data-bs-toggle="modal" data-bs-target="#popUpModal"><i class="icon-trash-2"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Teams Microsoft</td>
+				  <td>Ayman Eid</td>
+				  <td>02-202-2034</td>
+				  <td>Dell S2154</td>
+				  <td><a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-pencil-alt-1"></i></a></td>
+				  <td><a href="#" class="delete-icon" data-bs-toggle="modal" data-bs-target="#popUpModal"><i class="icon-trash-2"></i></a></td>
+				</tr>
+				<tr>
+				  <td>Zoom</td>
+				  <td>Mahmoud Hadad</td>
+				  <td>02-202-2034</td>
+				  <td>Dell S2154</td>
+				  <td><a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-pencil-alt-1"></i></a></td>
+				  <td><a href="#" class="delete-icon" data-bs-toggle="modal" data-bs-target="#popUpModal"><i class="icon-trash-2"></i></a></td>
+				</tr>
+			  </tbody>
+			</table>
+			</div><!--table-responsive-->
+				<hr>
+				<a href="#" class="btn btn-sm btn-success"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon-plus-circle"></i> Add New</a>
+			</div><!--white-box-->
+			
+		</div><!--page-container-->
+		<p class="copyright2">Copyright © 2022 Fly Insights.</p>
+	</div><!--content-->
+</div>
+	
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+	<form>
+		<div class="modal-body">
+		  <div class="row g-3">
+			  <div class="col-lg-6">
+				<label class="form-label">Application name</label>
+				<input type="text" class="form-control" placeholder="Application name">
+			  </div><!--col-->
+			  <div class="col-lg-6">
+				<label class="form-label">User name</label>
+				<input type="text" class="form-control" placeholder="User name">
+			  </div><!--col-->
+			  <div class="col-lg-6">
+				<label class="form-label">Mac address</label>
+				<input type="text" class="form-control is-invalid" placeholder="Mac address">
+				<label class="invalid-feedback">Invalid input</label>
+			  </div><!--col-->
+			  <div class="col-lg-6">
+				<label class="form-label">Device</label>
+				<input type="text" class="form-control" placeholder="Device">
+			  </div><!--col-->
+		 </div><!--row-->
+		</div><!--modal-body-->
+		<div class="modal-footer">
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+		</div><!--modal-footer-->
+	</form>
+    </div>
+  </div>
+</div>
+	
+<!-- popUpModal -->
+<div class="modal fade popUpModal" id="popUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+	<form>
+		<div class="modal-body">
+		  <div class="d-flex">
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  <div class="flex-shrink-0">
+				<i class="icon-trash-empty"></i>
+			  </div>
+			  <div class="flex-grow-1">
+				  <h4>Are you sure?</h4>
+				  <p>You are about to delete this integration, once deleted you can not undo this action.</p>
+				  <div class="popUpModalBtn">
+				  <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+		  <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+				  </div><!--popUpModalBtn-->
+			  </div>
+			</div><!--popUpModal-->
+		</div><!--modal-body-->
+	</form>
+    </div>
+  </div>
+</div>	
+<div class="overlay"></div>
+	
+<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+<!--Scrollbar-sidebarCollapse--->
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#sidebar").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+	$("#notification").mCustomScrollbar({
+		theme: "minimal",
+		scrollInertia:100
+	});
+
+	$('#dismiss, .overlay').on('click', function () {
+		$('#sidebar').removeClass('active');
+		$('.overlay').removeClass('active');
+	});
+
+	$('#sidebarCollapse').on('click', function () {
+		$('#sidebar, #content').toggleClass('active');
+		$('.overlay').addClass('active');
+		$('.collapse.in').toggleClass('in');
+		$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+	});
+});
+</script>
+
+<!--selectpicker-->
+<script src="js/bootstrap-select.min.js"></script>
+<script>
+$('.selectpicker').selectpicker();
+</script>
+	
+<!--daterangepicker-->
+<script src="js/moment.min.js"></script>
+<script src="js/daterangepicker.min.js"></script>
+	
+<script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+</script>
+	
+<!--datatables--->	
+<script src="js/datatables.min.js"></script>
+<script>
+	$(document).ready(function () {
+	$('#dtBasicExample,#dtBasicExample2').DataTable();
+	$('.dataTables_length').addClass('bs-select');
+	});
+</script>
+</body>
+</html>
