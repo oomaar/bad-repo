@@ -7,7 +7,7 @@ import { useUID } from "react-uid";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 
-export const width52pxStyle = { width: "52px" };
+export const width62pxStyle = { width: "62px" };
 export const width35pxStyle = { width: "35px" };
 export const width80pxStyle = { width: "80px" };
 export const width100pxStyle = { width: "100px" };

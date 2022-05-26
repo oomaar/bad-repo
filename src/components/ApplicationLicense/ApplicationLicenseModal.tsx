@@ -32,9 +32,7 @@ export const ApplicationLicenseModal = (props: {
 
   const [appCapacityError, setAppCapacityError] = useState(false);
 
-  const handleAddNewSubmition = (e: any) => {
-    e.preventDefault();
-
+  const handleAddNewSubmition = () => {
     if (validateForm) {
       handleSubmit();
       setAppCapacityError(false);
@@ -57,10 +55,7 @@ export const ApplicationLicenseModal = (props: {
       show={lgShow}
       size="lg"
     >
-      <form
-        className="modal-content"
-        onSubmit={(e) => handleAddNewSubmition(e)}
-      >
+      <form className="modal-content" onSubmit={(e) => e.preventDefault()}>
         <Modal.Header>
           <Modal.Title>{handleModalTitle}</Modal.Title>
           <CloseButton onClick={handleResetFormOnClose} />
@@ -135,7 +130,7 @@ export const ApplicationLicenseModal = (props: {
           <button
             type="submit"
             className="btn btn-primary"
-            // onClick={handleAddNewSubmition}
+            onClick={handleAddNewSubmition}
           >
             Submit
           </button>

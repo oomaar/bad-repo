@@ -3,7 +3,7 @@ import { GetUsersAdmins, GetUsersAdminsData } from "../../client/AuthedClient";
 import {
   Table,
   width35pxStyle,
-  width52pxStyle,
+  width62pxStyle,
   width80pxStyle,
 } from "../../components/Table";
 import { useAuthedClient } from "../../context/AuthedClientContext";
@@ -33,14 +33,15 @@ export const AdminManagement = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showAdminDetailsModal, setShowAdminDetailsModal] = useState(false);
   const [currentUser, setCurrentUser] = useState("");
-  const [currentUserDetails, setCurrentUserDetails] =
-    useState<AdminDetailsType>({
-      userName: "",
-      fullName: "",
-      title: "",
-      email: "",
-      phoneNumber: "",
-    });
+  const [currentUserDetails, setCurrentUserDetails] = useState<
+    AdminDetailsType
+  >({
+    userName: "",
+    fullName: "",
+    title: "",
+    email: "",
+    phoneNumber: "",
+  });
   const [currentEmail, setCurrentEmail] = useState("");
   const [currentTitle, setCurrentTitle] = useState("");
   const [currentFullName, setCurrentFullName] = useState("");
@@ -169,10 +170,10 @@ export const AdminManagement = () => {
     { name: "Full Name", attr: "fullName", style: width80pxStyle },
     { name: "Email", attr: "email", style: width80pxStyle },
     { name: "Title", attr: "title", style: width80pxStyle },
-    { name: "Reset Password", style: width52pxStyle, attr: "" },
+    { name: "Phone Number", attr: "phoneNumber", style: width62pxStyle },
+    { name: "Reset Password", style: width62pxStyle, attr: "" },
     { name: "Edit", style: width35pxStyle, attr: "" },
     { name: "Delete", style: width35pxStyle, attr: "" },
-    { name: "Details", style: width35pxStyle, attr: "" },
   ];
 
   const rows = (array: Array<GetUsersAdminsData>) => {
@@ -182,6 +183,7 @@ export const AdminManagement = () => {
         <td>{user.fullName}</td>
         <td>{user.email}</td>
         <td>{user.title}</td>
+        <td>{user.phoneNumber}</td>
         <td style={{ textAlign: "center" }}>
           <i
             className="mouse-pointer edit-icon bx bxs-lock-alt"
@@ -215,7 +217,7 @@ export const AdminManagement = () => {
             }}
           />
         </td>
-        <td style={{ textAlign: "center" }}>
+        {/* <td style={{ textAlign: "center" }}>
           <i
             className="icon-doc-text view-icon mouse-pointer"
             onClick={() => {
@@ -224,7 +226,7 @@ export const AdminManagement = () => {
               getAdminUserDetails(user.id);
             }}
           />
-        </td>
+        </td> */}
       </tr>
     ));
   };

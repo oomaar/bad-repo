@@ -6,7 +6,7 @@ import AuthedClient, {
   GetWebAvailablityProcess,
 } from "../client/AuthedClient";
 import { Page } from "../components/Page";
-import { Table, width52pxStyle } from "../components/Table";
+import { Table, width62pxStyle } from "../components/Table";
 import { useAuthedClient } from "../context/AuthedClientContext";
 import { Filters } from "../context/FiltersContext";
 import { roundTo2Places } from "../utils/misc";
@@ -68,7 +68,7 @@ function WebAvailabilityTable(props: { data: GetWebAvailablityProcess }) {
     { name: "Name", attr: "applicationName" },
     { name: "Average Response Time (ms)", attr: "averageResponseTime" },
     { name: "Availability Percentage", attr: "percentage" },
-    { name: "Trend", style: width52pxStyle, attr: "" },
+    { name: "Trend", style: width62pxStyle, attr: "" },
   ];
 
   const rows = (array: Array<GetWebAvailablityData>) => {
