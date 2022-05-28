@@ -96,7 +96,7 @@ export const PasswordModal = (props: {
       show={showPasswordModal}
       size="lg"
     >
-      <div className="modal-content">
+      <form onSubmit={(e) => e.preventDefault()} className="modal-content">
         <Modal.Header>
           <Modal.Title>Change Password For {currentUser}</Modal.Title>
           <CloseButton onClick={handleCloseModalWithErrors} />
@@ -110,7 +110,9 @@ export const PasswordModal = (props: {
                 autoComplete="new-password"
                 type="password"
                 className={`form-control ${
-                  passwordError || passLengthError ? "error-input" : ""
+                  passwordError || passLengthError || confirmationError
+                    ? "error-input"
+                    : ""
                 }`}
                 placeholder="New Password"
                 onChange={(e) => handleNewPasswordInputChange(e)}
@@ -119,7 +121,7 @@ export const PasswordModal = (props: {
               {passwordError ? (
                 <span className="error-span">Required !</span>
               ) : confirmationError ? (
-                <span className="error-span">Passwords do not match</span>
+                <span className="error-span">Password mismatch</span>
               ) : passLengthError ? (
                 <span className="error-span">
                   Password must be atleast 6 characters
@@ -134,7 +136,9 @@ export const PasswordModal = (props: {
                 autoComplete="new-password"
                 type="password"
                 className={`form-control ${
-                  confirmPasswordError || passLengthError ? "error-input" : ""
+                  confirmPasswordError || passLengthError || confirmationError
+                    ? "error-input"
+                    : ""
                 }`}
                 placeholder="Confirm New Password"
                 onChange={(e) => handleConfirmPasswordInputChange(e)}
@@ -142,8 +146,6 @@ export const PasswordModal = (props: {
               />
               {confirmPasswordError ? (
                 <span className="error-span">Required !</span>
-              ) : confirmationError ? (
-                <span className="error-span">Passwords do not match</span>
               ) : (
                 <></>
               )}
@@ -151,7 +153,11 @@ export const PasswordModal = (props: {
           </div>
         </Modal.Body>
         <Modal.Footer className="mt-4">
-          <button className="btn btn-primary" onClick={() => handleSubmit()}>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={() => handleSubmit()}
+          >
             Submit
           </button>
           <button
@@ -163,7 +169,7 @@ export const PasswordModal = (props: {
             Cancel
           </button>
         </Modal.Footer>
-      </div>
+      </form>
     </Modal>
   );
 };

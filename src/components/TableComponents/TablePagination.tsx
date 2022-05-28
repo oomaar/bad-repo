@@ -108,7 +108,7 @@ export const TablePagination = ({
                 Previous
               </button>
             </li>
-            {currentPage > visibleCount - 2 && (
+            {numberOfPages.length > 5 && currentPage > visibleCount - 2 && (
               <li className="paginate_button page-item">
                 <button
                   className="page-link"
@@ -143,24 +143,25 @@ export const TablePagination = ({
                   </button>
                 </li>
               ))}
-            {currentPage <
-              numberOfPages[numberOfPages.length - 1] -
-                Math.floor(visibleCount / 2) && (
-              <li className="paginate_button page-item ">
-                <button
-                  className="page-link"
-                  onClick={() => {
-                    setCurrentPage(
-                      currentPage + visibleCount <= numberOfPages.length
-                        ? numberOfPages[currentPage + visibleCount - 1]
-                        : numberOfPages[numberOfPages.length - 1]
-                    );
-                  }}
-                >
-                  ...
-                </button>
-              </li>
-            )}
+            {numberOfPages.length > 5 &&
+              currentPage <
+                numberOfPages[numberOfPages.length - 1] -
+                  Math.floor(visibleCount / 2) && (
+                <li className="paginate_button page-item ">
+                  <button
+                    className="page-link"
+                    onClick={() => {
+                      setCurrentPage(
+                        currentPage + visibleCount <= numberOfPages.length
+                          ? numberOfPages[currentPage + visibleCount - 1]
+                          : numberOfPages[numberOfPages.length - 1]
+                      );
+                    }}
+                  >
+                    ...
+                  </button>
+                </li>
+              )}
             <li
               className="paginate_button page-item next"
               id="dtBasicExample_next"

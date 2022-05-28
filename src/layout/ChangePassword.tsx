@@ -30,6 +30,7 @@ export const ChangePassword = (props: {
         } else {
           const res = await auth.changeUserPassword(oldPassWord, newPassword);
           if (res.data) {
+            handleCloseAllModals();
             ToastSuccessFunction("Password Changed Successfully");
             handleCloseChangePassword();
           } else {
@@ -47,11 +48,11 @@ export const ChangePassword = (props: {
       } else {
         setoldpassError({ msg: "", show: false });
         setNewPassError({
-          msg: "passWord And Confirm Password MissMatch",
+          msg: "New Password and Confirm Password mismatch",
           show: true,
         });
         setConfirmPassError({
-          msg: "passWord And Confirm Password MissMatch",
+          msg: "New Password and Confirm Password mismatch",
           show: true,
         });
       }
@@ -67,6 +68,7 @@ export const ChangePassword = (props: {
       }
     }
   }
+
   return (
     <>
       <Modal.Header>

@@ -13,8 +13,14 @@ export const AddNewUserModal = (props: {
     phoneNumber: string,
     title: string
   ) => void;
+  userNamesArray: Array<string>;
 }) => {
-  const { showAddModal, handleCloseAddModal, createUserAdmin } = props;
+  const {
+    showAddModal,
+    handleCloseAddModal,
+    createUserAdmin,
+    userNamesArray,
+  } = props;
 
   // Values
   const [username, setUsername] = useState("");
@@ -36,6 +42,7 @@ export const AddNewUserModal = (props: {
     msg: "",
   });
   const [passwordError, setPasswordError] = useState({ show: false, msg: "" });
+  const [userNameExistError, setUserNameExistError] = useState(false);
 
   // Validation
   const formIsValid =
@@ -62,6 +69,7 @@ export const AddNewUserModal = (props: {
     setTitleError(false);
     setPhoneNumberError({ show: false, msg: "" });
     setPasswordError({ show: false, msg: "" });
+    setUserNameExistError(false);
   };
 
   const handleSubmit = (
@@ -114,11 +122,15 @@ export const AddNewUserModal = (props: {
     if (title === "") {
       setTitleError(true);
     }
+    if (userNamesArray.includes(username)) {
+      setUserNameExistError(true);
+    }
   };
 
   // Input Functions
   const handleUserNameInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUserNameError(false);
+    setUserNameExistError(false);
     setUsername(e.target.value);
   };
 
@@ -164,7 +176,7 @@ export const AddNewUserModal = (props: {
       show={showAddModal}
       size="lg"
     >
-      <div className="modal-content">
+      <form onSubmit={(e) => e.preventDefault()} className="modal-content">
         <Modal.Header>
           <Modal.Title>Add New Admin</Modal.Title>
           <CloseButton onClick={handleCloseModalAndResetForm} />
@@ -176,13 +188,17 @@ export const AddNewUserModal = (props: {
               <label className="form-label">Username</label>
               <input
                 type="text"
-                className={`form-control ${userNameError ? "error-input" : ""}`}
+                className={`form-control ${
+                  userNameError || userNameExistError ? "error-input" : ""
+                }`}
                 placeholder="Username"
                 onChange={(e) => handleUserNameInputChange(e)}
                 value={username}
               />
               {userNameError ? (
                 <span className="error-span">Required</span>
+              ) : userNameExistError ? (
+                <span className="error-span">Username already exists</span>
               ) : (
                 <></>
               )}
@@ -286,6 +302,7 @@ export const AddNewUserModal = (props: {
         </Modal.Body>
         <Modal.Footer className="mt-4">
           <button
+            type="submit"
             className="btn btn-primary"
             onClick={() =>
               validateForm(
@@ -309,7 +326,7 @@ export const AddNewUserModal = (props: {
             Cancel
           </button>
         </Modal.Footer>
-      </div>
+      </form>
     </Modal>
   );
 };

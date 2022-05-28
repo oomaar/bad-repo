@@ -33,9 +33,8 @@ export const AdminManagement = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showAdminDetailsModal, setShowAdminDetailsModal] = useState(false);
   const [currentUser, setCurrentUser] = useState("");
-  const [currentUserDetails, setCurrentUserDetails] = useState<
-    AdminDetailsType
-  >({
+  // const [currentUserDetails, setCurrentUserDetails] = useState<
+  const [currentUserDetails] = useState<AdminDetailsType>({
     userName: "",
     fullName: "",
     title: "",
@@ -61,10 +60,10 @@ export const AdminManagement = () => {
   };
 
   const handleCloseAdminDetailsModal = () => setShowAdminDetailsModal(false);
-  const handleShowAdminDetailsModal = (userName: string) => {
-    setCurrentUser(userName);
-    setShowAdminDetailsModal(true);
-  };
+  // const handleShowAdminDetailsModal = (userName: string) => {
+  //   setCurrentUser(userName);
+  //   setShowAdminDetailsModal(true);
+  // };
 
   const handleClosePasswordModal = () => setShowPasswordModal(false);
   const handleShowPasswordModal = (userName: string) => {
@@ -94,11 +93,11 @@ export const AdminManagement = () => {
     await authedClient.getUsersAdmins().then((data) => setUserAdmins(data));
   }
 
-  async function getAdminUserDetails(id: string) {
-    await authedClient
-      .getAdminSummary(id)
-      .then((res) => setCurrentUserDetails(res.data));
-  }
+  // async function getAdminUserDetails(id: string) {
+  //   await authedClient
+  //     .getAdminSummary(id)
+  //     .then((res) => setCurrentUserDetails(res.data));
+  // }
 
   async function createUserAdmin(
     username: string,
@@ -252,6 +251,7 @@ export const AdminManagement = () => {
     excelData.push(excelObj);
     return 0;
   });
+
   const rowStrings = arrayOfUsers.map((user) => [user.userName]);
 
   const deleteButton = (
@@ -262,6 +262,10 @@ export const AdminManagement = () => {
       Confirm
     </button>
   );
+
+  const userNamesArray = rowsData.map((row: any) => {
+    return row.userName;
+  });
 
   return (
     <div className="page-container">
@@ -288,6 +292,7 @@ export const AdminManagement = () => {
           showAddModal={showAddModal}
           handleCloseAddModal={handleCloseAddModal}
           createUserAdmin={createUserAdmin}
+          userNamesArray={userNamesArray}
         />
         <DeleteModal
           currentAppName={currentUser}

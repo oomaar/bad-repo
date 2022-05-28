@@ -86,7 +86,7 @@ export const WebapplicationModal = (props: {
       show={showModal}
       size="lg"
     >
-      <div className="modal-content">
+      <form onSubmit={(e) => e.preventDefault()} className="modal-content">
         <Modal.Header>
           <Modal.Title>{handleModalTitle}</Modal.Title>
           <CloseButton onClick={handleResetFormErrorsOnClose} />
@@ -133,6 +133,7 @@ export const WebapplicationModal = (props: {
         </Modal.Body>
         <Modal.Footer className="mt-4">
           <button
+            type="submit"
             onClick={handleSubmitFormWithErrors}
             className="btn btn-primary"
           >
@@ -147,7 +148,7 @@ export const WebapplicationModal = (props: {
             Cancel
           </button>
         </Modal.Footer>
-      </div>
+      </form>
     </Modal>
   );
 };

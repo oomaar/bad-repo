@@ -61,6 +61,7 @@ export const EditUserModal = (props: {
     ) {
       updateUserAdmin(id, fullName, title, phoneNumber, email);
       setEmailError({ show: false, msg: "" });
+      setPhoneError({ show: false, msg: "" });
       handleCloseEditModal();
       ToastSuccessFunction(`Success Editing ${userName}'s Information.`);
     } else {
@@ -89,7 +90,7 @@ export const EditUserModal = (props: {
       show={showEditModal}
       size="lg"
     >
-      <div className="modal-content">
+      <form onSubmit={(e) => e.preventDefault()} className="modal-content">
         <Modal.Header>
           <Modal.Title>Edit User {currentUser}</Modal.Title>
           <CloseButton onClick={handleCloseEditModal} />
@@ -161,6 +162,7 @@ export const EditUserModal = (props: {
         </Modal.Body>
         <Modal.Footer className="mt-4">
           <button
+            type="submit"
             className="btn btn-primary"
             onClick={() =>
               handleSubmit(
@@ -187,7 +189,7 @@ export const EditUserModal = (props: {
             Cancel
           </button>
         </Modal.Footer>
-      </div>
+      </form>
     </Modal>
   );
 };
